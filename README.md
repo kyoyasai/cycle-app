@@ -9,16 +9,15 @@
 | encrypted_password | string  | null: false               |
 | last_name          | string  | null: false               |
 | first_name         | string  | null: false               |
-| birth_date         | date    | null: false               |
 
 ### Association
 
-- has_many :tweets
+- has_many :articles
 - has_many :comments
 
 
 
-## tweets
+## articles
 
 | Column        | Type       | Options                        |
 |---------------|------------|--------------------------------|
@@ -42,12 +41,12 @@
 |---------|------------|--------------------------------|
 | message | text       | null: false                    |
 | user    | references | null: false, foreign_key: true |
-| item    | references | null: false, foreign_key: true |
+| article | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- belongs_to :tweet
+- belongs_to :article
 
 
 
@@ -60,18 +59,18 @@
 
 ### Association
 
-- has_many :tweet-tags
+- has_many :article-tags
 
 
 
-## tweet-tags
+## article-tags
 
-| Column | Type       | Options                        |
-|--------|------------|--------------------------------|
-| tweet  | references | null: false, foreign_key: true |
-| tag    | references | null: false, foreign_key: true |
+| Column  | Type       | Options                        |
+|---------|------------|--------------------------------|
+| article | references | null: false, foreign_key: true |
+| tag     | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :tweet
+- belongs_to :article
 - belongs_to :tag
