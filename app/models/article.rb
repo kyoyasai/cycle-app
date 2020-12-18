@@ -5,4 +5,8 @@ class Article < ApplicationRecord
     validates :distance
     validates :content
   end
+
+  belongs_to :user
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :prefecture
 end
