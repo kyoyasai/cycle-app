@@ -1,0 +1,33 @@
+<div class="post-page">
+  <header class="post-header">
+    <%= link_to image_tag("cycle-logo.png",  size: '150x150'), "/" %>
+  </header>
+
+  <div class="post-main">
+    <%= form_with model: @article, local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+      <div class="post-form">
+        <%= f.text_field :title, class: "short-text", placeholder: "目的地" %>
+        <div class="post-second">
+          <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"post-prefecture"}) %>
+          <div class="distance-form">
+            <%= f.text_field :distance, class: "distance-text", placeholder: "走行距離" %>
+            <div class="distance-unit">km</div>
+          </div>
+        </div>
+        <div class="post-content">
+          <%= f.text_area :content, class: "long-text", placeholder: "できごと" %>
+        </div>
+      </div>
+
+      <div class="form-btn-contents">
+      <%= f.submit "投稿する" ,class:"form-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <% end %>
+  </div>
+
+  <footer class="post-footer">
+    <%= link_to image_tag("cycle-logo.png",  size: '100x100'), "/" %>
+  </footer>
+</div>
