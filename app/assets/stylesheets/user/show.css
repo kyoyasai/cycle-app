@@ -1,0 +1,20 @@
+.mypage {
+  background-color: #f5f5f5;
+  display: flex;
+  height: 100%;
+}
+
+.mypage-search {
+  width: 25%;
+}
+
+.mypage-post {
+  width: 75%;
+  padding: 16px 16px 8px;
+}
+
+.mypage-name {
+  font-size: 20px;
+  color: black;
+  padding-bottom: 8px;
+}

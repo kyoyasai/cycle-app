@@ -21,6 +21,6 @@
   </div>
   <p><%= article.content %></p>
   <div class = "name">
-    <%= link_to article.user.nickname, "#", class: "post-user"%> <%# 詳細ページ_path(article.user.id)%>
+    <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
   </div>
 </div>
