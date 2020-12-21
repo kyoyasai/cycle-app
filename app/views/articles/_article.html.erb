@@ -1,0 +1,26 @@
+<div class="post-show">
+  <div class="first-show">
+    <p class="post-destination">目的地：<%= article.title %></p>
+    <% if user_signed_in? && current_user.id == article.user_id %>
+      <div class="bar-btn", id="bar">
+        ...
+        <ul class="bar-contents", id="pull-down">
+          <li class="bar-list">
+            <%= link_to '編集', "#", class: "list-btn" %>
+          </li>
+          <li class="bar-list">
+            <%= link_to '削除', "#", class: "list-btn" %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+  <div class="second-show">
+    <div><%= article.prefecture.name %></div>
+    <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
+  </div>
+  <p><%= article.content %></p>
+  <div class = "name">
+    <%= link_to article.user.nickname, "#", class: "post-user"%> <%# 詳細ページ_path(article.user.id)%>
+  </div>
+</div>
