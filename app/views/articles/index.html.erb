@@ -1,0 +1,12 @@
+<%= render "/shared/header"%>
+
+<div class="main-page", id="main">
+  <div class="search-list">検索</div>
+  <div class="post-list">
+    <% @articles.each do |article| %>
+      <%= render partial: "article", locals: {article: article}%>
+    <% end %>
+  </div>
+</div>
+
+<%= render "/shared/footer"%>
