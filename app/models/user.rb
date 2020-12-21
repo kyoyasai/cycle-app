@@ -14,4 +14,6 @@ class User < ApplicationRecord
       validates :first_name
     end
   end
+
+  has_many :articles
 end
