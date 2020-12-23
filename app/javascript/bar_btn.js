@@ -1,12 +1,14 @@
 window.addEventListener("load", ()=>{
-  const pullDownButton = document.getElementById("bar");
-  const indicateButton = document.getElementById("pull-down");
+  const pullDownButton = document.querySelectorAll(".bar-btn");
+  const indicateButton = document.querySelectorAll(".bar-contents");
 
-  pullDownButton.addEventListener("click", ()=>{
-    if (indicateButton.getAttribute("style") == "display: block;") {
-      indicateButton.removeAttribute("style", "display: block;");
-    } else {
-      indicateButton.setAttribute("style", "display: block;");
-    }
-  });
+  for ( let i = 0; i < pullDownButton.length; i++) {
+    pullDownButton[i].addEventListener("click", () => {
+      if (indicateButton[i].getAttribute("style") == "display: block;") {
+        indicateButton[i].removeAttribute("style", "display: block;");
+      } else {
+        indicateButton[i].setAttribute("style", "display: block;");
+      }
+    });
+  }
 });
