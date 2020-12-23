@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
-  before_action :set_article, only: [:edit, :update]
-  before_action :user_judge, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :set_article, only: [:edit, :update, :destroy]
+  before_action :user_judge, only: [:edit, :update, :destroy]
 
   def index
     @articles = Article.includes(:user)
@@ -30,6 +30,11 @@ class ArticlesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @article.destroy
+    redirect_to root_path
   end
 
   private
