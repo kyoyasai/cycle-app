@@ -9,7 +9,7 @@
             <%= link_to '編集', edit_article_path(article.id), class: "list-btn" %>
           </li>
           <li class="bar-list">
-            <%= link_to '削除', "#", class: "list-btn" %>
+            <%= link_to '削除', article_path(article.id), method: :delete, class: "list-btn" %>
           </li>
         </ul>
       </div>
