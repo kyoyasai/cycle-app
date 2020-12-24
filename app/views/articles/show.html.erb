@@ -1,0 +1,9 @@
+<%= render "/shared/header"%>
+
+<div class="show-main">
+  <div class="show-post">
+    <%= render partial: "article", locals: {article: @article}%>
+  </div>
+</div>
+
+<%= render "/shared/footer"%>
