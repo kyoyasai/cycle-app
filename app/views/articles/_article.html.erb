@@ -6,6 +6,9 @@
         ...
         <ul class="bar-contents", id="pull-down">
           <li class="bar-list">
+            <%= link_to '詳細', article_path(article.id),method: :get, class: "list-btn" %>
+          </li>
+          <li class="bar-list">
             <%= link_to '編集', edit_article_path(article.id), class: "list-btn" %>
           </li>
           <li class="bar-list">
