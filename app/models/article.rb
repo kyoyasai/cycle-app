@@ -7,6 +7,7 @@ class Article < ApplicationRecord
   end
 
   belongs_to :user
+  has_many   :comments, dependent: :destroy
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
 end

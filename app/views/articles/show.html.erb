@@ -2,7 +2,57 @@
 
 <div class="show-main">
   <div class="show-post">
-    <%= render partial: "article", locals: {article: @article}%>
+    <div class="post-show">
+      <div class="first-show">
+        <p class="post-destination">目的地：<%= @article.title %></p>
+        <% if user_signed_in? && current_user.id == @article.user_id %>
+          <div class="bar-btn", id="bar">
+          ...
+          <ul class="bar-contents", id="pull-down">
+            <li class="bar-list">
+              <%= link_to '詳細', article_path(@article.id),method: :get, class: "list-btn" %>
+            </li>
+            <li class="bar-list">
+              <%= link_to '編集', edit_article_path(@article.id), class: "list-btn" %>
+            </li>
+            <li class="bar-list">
+              <%= link_to '削除', article_path(@article.id), method: :delete, class: "list-btn" %>
+            </li>
+          </ul>
+          </div>
+        <% end %>
+      </div>
+      <div class="second-show">
+        <div><%= @article.prefecture.name %></div>
+        <div class="distance-show"><%= @article.distance %><p class="distance-unit-show">km</p></div>
+      </div>
+      <p><%= @article.content %></p>
+      <div class = "name">
+        <%= link_to @article.user.nickname, user_path(@article.user_id), class: "post-user"%>
+      </div>
+    </div>
+  </div>
+  <div class="comment-form">
+    <%= form_with model: [@article, @comment], local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+      <div class="comment-main">
+        <%= f.text_area :message, placeholder: "コメントする", class: "comment-text" %>
+        <%= f.submit '送信', class: "comment-btn" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="comment-lists">
+    <p class=comment-lists-label>コメント一覧</p>
+    <% @comments.each_with_index do |comment, idx| %>
+      <div class="comment-show">
+        <div class="commnet-show-message">
+          <%= idx + 1 %>.<%= comment.message %>
+        </div>
+        <div class="comment-show-name">
+        <%= link_to comment.user.nickname, user_path(comment.user), class: "comment-user"%>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
 

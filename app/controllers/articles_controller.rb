@@ -38,6 +38,8 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @article.comments.includes(:user)
   end
 
   private
