@@ -42,6 +42,10 @@ class ArticlesController < ApplicationController
     @comments = @article.comments.includes(:user)
   end
 
+  def search
+    @articles = Article.search(params[:keyword])
+  end
+
   private
   def item_params
     params.require(:article).permit(:title, :prefecture_id, :distance, :content, :evalustion).merge(user_id: current_user.id)

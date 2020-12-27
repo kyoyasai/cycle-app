@@ -10,4 +10,12 @@ class Article < ApplicationRecord
   has_many   :comments, dependent: :destroy
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
+
+  def self.search(search)
+    if search != ""
+      Article.where('title LIKE(?)', "%#{search}%")
+    else
+      Article.all
+    end
+  end
 end
