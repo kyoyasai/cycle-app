@@ -6,19 +6,19 @@
       <div class="first-show">
         <p class="post-destination">目的地：<%= @article.title %></p>
         <% if user_signed_in? && current_user.id == @article.user_id %>
-          <div class="bar-btn", id="bar">
-          ...
-          <ul class="bar-contents", id="pull-down">
-            <li class="bar-list">
-              <%= link_to '詳細', article_path(@article.id),method: :get, class: "list-btn" %>
-            </li>
-            <li class="bar-list">
-              <%= link_to '編集', edit_article_path(@article.id), class: "list-btn" %>
-            </li>
-            <li class="bar-list">
-              <%= link_to '削除', article_path(@article.id), method: :delete, class: "list-btn" %>
-            </li>
-          </ul>
+          <div class="btn-group", id="bar">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">...</button>
+            <ul class="bar-contents", id="pull-down" role="menu">
+              <li class="bar-list", role="presentation">
+                <%= link_to '詳細', article_path(@article.id),method: :get, class: "list-btn" %>
+              </li>
+              <li class="bar-list" role="presentation">
+                <%= link_to '編集', edit_article_path(@article.id), class: "list-btn" %>
+              </li>
+              <li class="bar-list" role="presentation">
+                <%= link_to '削除', article_path(@article.id), method: :delete, class: "list-btn" %>
+              </li>
+            </ul>
           </div>
         <% end %>
       </div>
