@@ -3,7 +3,7 @@
 <div class="main-page", id="main">
   <div class="search-list">
     <%= form_with url: search_articles_path, local: true, method: :get, class: "search-form" do |f| %>
-      <%= f.text_field :keyword, placeholder: "目的地で検索", class: "search-box" %>
+      <%= f.text_field :keyword, placeholder: "キーワード検索", class: "search-box" %>
       <%= f.submit "検索", class: "search-btn" %>
     <% end %>
   </div>
