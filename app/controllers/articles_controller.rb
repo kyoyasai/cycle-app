@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.includes(:user)
+    @like = Like.new
   end
 
   def new
