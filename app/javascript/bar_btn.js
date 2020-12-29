@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", ()=>{
-  const pullDownButton = document.querySelectorAll(".btn-group");
+  const pullDownButton = document.querySelectorAll(".bar-btn");
   const indicateButton = document.querySelectorAll(".bar-contents");
 
   for ( let i = 0; i < pullDownButton.length; i++) {
