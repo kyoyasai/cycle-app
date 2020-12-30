@@ -24,17 +24,8 @@
   </div>
   <p><%= article.content %></p>
   <div class="bottom-show">
-    <div class="like">
-      <div class="like-count">
-        <%= article.likes.count %>
-      </div>
-      <div>
-        <% if current_user.like_judge(article) %>
-          <%= button_to "いいねを取り消す", article_like_path(article.id, article.likes.ids), method: :delete, class: "like-btn" %>
-        <% else %>
-          <%= button_to "いいね", article_likes_path(article.id), method: :post, class: "like-btn" %>
-        <% end %>
-      </div>
+    <div class="like", id="article_<%= article.id %>">
+      <%= render partial: "likes/like", locals: {article: article} %>
     </div>
     <div class = "name">
       <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
