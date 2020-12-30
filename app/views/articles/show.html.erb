@@ -2,38 +2,10 @@
 
 <div class="show-main">
   <div class="show-post">
-    <div class="post-show">
-      <div class="first-show">
-        <p class="post-destination">目的地：<%= @article.title %></p>
-        <% if user_signed_in? && current_user.id == @article.user_id %>
-          <div class="btn-group", id="bar">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">...</button>
-            <ul class="bar-contents", id="pull-down" role="menu">
-              <li class="bar-list", role="presentation">
-                <%= link_to '詳細', article_path(@article.id),method: :get, class: "list-btn" %>
-              </li>
-              <li class="bar-list" role="presentation">
-                <%= link_to '編集', edit_article_path(@article.id), class: "list-btn" %>
-              </li>
-              <li class="bar-list" role="presentation">
-                <%= link_to '削除', article_path(@article.id), method: :delete, class: "list-btn" %>
-              </li>
-            </ul>
-          </div>
-        <% end %>
-      </div>
-      <div class="second-show">
-        <div><%= @article.prefecture.name %></div>
-        <div class="distance-show"><%= @article.distance %><p class="distance-unit-show">km</p></div>
-      </div>
-      <p><%= @article.content %></p>
-      <div class = "name">
-        <%= link_to @article.user.nickname, user_path(@article.user_id), class: "post-user"%>
-      </div>
-    </div>
+    <%= render partial: "articles/article", locals: {article: @article}%>
   </div>
   <div class="comment-form">
-    <%= form_with model: [@article, @comment], local: true do |f| %>
+    <%= form_with model: [@article, @comment], url: article_comments_path, local: true do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
       <div class="comment-main">
         <%= f.text_area :message, placeholder: "コメントする", class: "comment-text" %>
