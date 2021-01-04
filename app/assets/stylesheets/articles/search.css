@@ -1,0 +1,38 @@
+.search-content{
+  font-size: 14px;
+}
+
+.search-box {
+  height: 40px;
+  width: 200px;
+}
+
+.search-block {
+  margin-top: 20px;
+}
+
+.search-label {
+  font-size: 16px;
+}
+
+.distance-search-box {
+  width: 80px;
+}
+
+.prefecture-search-box {
+  font-size: 12px;
+  height: 30px;
+  width: 200px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.search-btn {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 50px;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: 20px;
+}

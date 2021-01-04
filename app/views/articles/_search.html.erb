@@ -1,0 +1,16 @@
+<div class="search-content">
+  <%= f.search_field :title_or_content_cont, placeholder: "キーワード検索", class: "search-box" %>
+  <div class="search-block">
+    <%= f.label :distance_eq, '走行距離で検索', class:"search-label" %>
+    <br>
+    <%= f.search_field :distance_gteq, class:"distance-search-box" %>km ~ 
+    <%= f.search_field :distance_lteq, class:"distance-search-box" %>km
+  </div>
+  <div class="search-block">
+    <%= f.label :prefecture_name_eq, '県名で検索', class:"search-label" %>
+    <br>
+    <%#= f.collection_select :prefecture_id_eq, @article_prefecture, :prefecture_id, :prefecture_id, include_blank: '県名を選択' %>
+    <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, {}, class:"prefecture-search-box" %>
+  </div>
+  <%= f.submit "検索", class: "search-btn" %>
+</div>
