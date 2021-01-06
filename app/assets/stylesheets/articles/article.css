@@ -82,6 +82,17 @@
   padding: 3px;
 }
 
+.bottm-right {
+  display: flex;
+  align-items: center;
+}
+
+.show-page-btn {
+  text-decoration: none;
+  color: slategray;
+  margin-right: 5px;
+}
+
 .post-user {
   text-decoration: none;
   color: slategray;

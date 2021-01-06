@@ -5,9 +5,6 @@
       <div class="bar-btn", id="bar">
         ...
         <ul class="bar-contents", id="pull-down" role="menu">
-          <li class="bar-list", role="presentation">
-            <%= link_to '詳細', article_path(article.id),method: :get, class: "list-btn" %>
-          </li>
           <li class="bar-list" role="presentation">
             <%= link_to '編集', edit_article_path(article.id), class: "list-btn" %>
           </li>
@@ -27,7 +24,10 @@
     <div class="like", id="article_<%= article.id %>">
       <%= render partial: "likes/like", locals: {article: article} %>
     </div>
-    <div class = "name">
+    <div class = "bottom-right">
+      <% unless current_page?(article_path(article.id)) %>
+        <%= link_to '詳細ページ', article_path(article.id), class: "show-page-btn" %>
+      <% end %>
       <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
     </div>
   </div>
