@@ -1,3 +1,5 @@
+/* 1行目 */
+
 .post-show {
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -17,7 +19,7 @@
 .bar-btn {
   border: none;
   background-color: #f5f5f5;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .bar-btn:hover {
@@ -43,6 +45,11 @@
   z-index: 2;
 }
 
+/*/1行目*/
+
+
+/*2,3行目*/
+
 .second-show {
   display: flex;
   justify-content: flex-start;
@@ -59,6 +66,11 @@
   font-size: 18px;
   margin-left: 10px;
 }
+
+/*2,3行目*/
+
+
+/*最終行*/
 
 .bottom-show {
   display: flex;
@@ -82,7 +94,7 @@
   padding: 3px;
 }
 
-.bottm-right {
+.bottom-right {
   display: flex;
   align-items: center;
 }
@@ -97,3 +109,5 @@
   text-decoration: none;
   color: slategray;
 }
+
+/*/最終行*/
