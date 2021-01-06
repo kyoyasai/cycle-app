@@ -1,6 +1,12 @@
 <div class="post-show">
   <div class="first-show">
-    <p class="post-destination">目的地：<%= article.title %></p>
+    <div class="post-title">
+      <% unless current_page?(article_path(article.id)) %>
+        <%= link_to article.title, article_path(article.id), class: "post-title-btn" %>
+      <% else %>
+        <b><%= article.title %></b>
+      <% end %>
+    </div>
     <% if user_signed_in? && current_user.id == article.user_id %>
       <div class="bar-btn", id="bar">
         ...
@@ -27,9 +33,6 @@
       <%= render partial: "likes/like", locals: {article: article} %>
     </div>
     <div class = "bottom-right">
-      <% unless current_page?(article_path(article.id)) %>
-        <%= link_to '詳細ページ', article_path(article.id), class: "show-page-btn" %>
-      <% end %>
       <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
     </div>
   </div>

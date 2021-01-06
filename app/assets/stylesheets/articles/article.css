@@ -12,8 +12,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2px;
   width: 100%;
   height: 20px;
+}
+
+.post-title-btn {
+  text-decoration: none;
 }
 
 .bar-btn {
@@ -54,6 +59,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 2px;
 }
 
 .distance-show {
@@ -68,7 +74,7 @@
 }
 
 .content-show {
-  margin: 5px 0 10px 0;
+  margin-bottom: 10px;
 }
 
 /*2,3行目*/
@@ -79,6 +85,7 @@
 .bottom-show {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: slategray;
 }
 
@@ -99,8 +106,6 @@
 }
 
 .bottom-right {
-  display: flex;
-  align-items: center;
   margin-right: 10px;
 }
 
