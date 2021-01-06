@@ -3,7 +3,7 @@
 .post-show {
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 80%;
+  width: 75%;
   padding: 4px;
   margin-bottom: 20px;
 }
@@ -67,6 +67,10 @@
   margin-left: 10px;
 }
 
+.content-show {
+  margin: 5px 0 10px 0;
+}
+
 /*2,3行目*/
 
 
@@ -97,6 +101,7 @@
 .bottom-right {
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
 .show-page-btn {

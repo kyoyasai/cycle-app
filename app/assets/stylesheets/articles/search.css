@@ -1,5 +1,6 @@
 .search-content{
   font-size: 14px;
+  margin-left: 20px;
 }
 
 .search-box {
@@ -35,4 +36,5 @@
   height: 40px;
   border-radius: 4px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }

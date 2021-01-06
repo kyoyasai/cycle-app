@@ -19,7 +19,9 @@
     <div><%= article.prefecture.name %></div>
     <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
   </div>
-  <p><%= article.content %></p>
+  <div class="content-show">
+    <%= safe_join(article.content.split("\n"), tag(:br)) %>
+  </div>
   <div class="bottom-show">
     <div class="like", id="article_<%= article.id %>">
       <%= render partial: "likes/like", locals: {article: article} %>
