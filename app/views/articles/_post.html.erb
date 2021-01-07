@@ -1,5 +1,5 @@
 <div class="post-form">
-  <%= f.text_field :title, class: "short-text", placeholder: "目的地" %>
+  <%= f.text_field :title, class: "short-text", placeholder: "タイトル" %>
   <div class="post-second">
     <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"post-prefecture"}) %>
     <div class="distance-form">

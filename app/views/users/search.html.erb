@@ -8,9 +8,9 @@
   </div>
   <div class="mypage-post">
     <div class="mypage-name">
-      <b><%= @user.nickname %></b>さんの投稿一覧
+      <b><%= link_to @user.nickname, user_path(@user), class: "mypage-user-name" %></b>さんの投稿検索結果
     </div>
-    <% @articles.each do |article| %>
+    <% @results.each do |article| %>
       <%= render partial: "/articles/article", locals: {article: article}%>
     <% end %>
   </div>

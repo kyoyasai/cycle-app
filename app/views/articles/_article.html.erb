@@ -1,13 +1,16 @@
 <div class="post-show">
   <div class="first-show">
-    <p class="post-destination">目的地：<%= article.title %></p>
+    <div class="post-title">
+      <% unless current_page?(article_path(article.id)) %>
+        <%= link_to article.title, article_path(article.id), class: "post-title-btn" %>
+      <% else %>
+        <b><%= article.title %></b>
+      <% end %>
+    </div>
     <% if user_signed_in? && current_user.id == article.user_id %>
       <div class="bar-btn", id="bar">
         ...
         <ul class="bar-contents", id="pull-down" role="menu">
-          <li class="bar-list", role="presentation">
-            <%= link_to '詳細', article_path(article.id),method: :get, class: "list-btn" %>
-          </li>
           <li class="bar-list" role="presentation">
             <%= link_to '編集', edit_article_path(article.id), class: "list-btn" %>
           </li>
@@ -22,12 +25,14 @@
     <div><%= article.prefecture.name %></div>
     <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
   </div>
-  <p><%= article.content %></p>
+  <div class="content-show">
+    <%= safe_join(article.content.split("\n"), tag(:br)) %>
+  </div>
   <div class="bottom-show">
     <div class="like", id="article_<%= article.id %>">
       <%= render partial: "likes/like", locals: {article: article} %>
     </div>
-    <div class = "name">
+    <div class = "bottom-right">
       <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
     </div>
   </div>

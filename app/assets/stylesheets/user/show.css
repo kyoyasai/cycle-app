@@ -5,11 +5,11 @@
 }
 
 .mypage-search {
-  width: 25%;
+  width: 30%;
 }
 
 .mypage-post {
-  width: 75%;
+  width: 70%;
   padding: 16px 16px 8px;
 }
 
@@ -17,4 +17,8 @@
   font-size: 20px;
   color: black;
   padding-bottom: 8px;
+}
+
+.mypage-user-name {
+  text-decoration: none;
 }
