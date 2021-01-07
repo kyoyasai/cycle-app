@@ -18,3 +18,7 @@
   color: black;
   padding-bottom: 8px;
 }
+
+.mypage-user-name {
+  text-decoration: none;
+}

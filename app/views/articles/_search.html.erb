@@ -12,7 +12,6 @@
   <div class="search-block">
     <%= f.label :prefecture_name_eq, '都道府県で検索', class:"search-label" %>
     <br>
-    <%#= f.collection_select :prefecture_id_eq, @article_prefecture, :prefecture_id, :prefecture_id, include_blank: '県名を選択' %>
     <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, {}, class:"prefecture-search-box" %>
   </div>
   <%= f.submit "検索", class: "search-btn" %>

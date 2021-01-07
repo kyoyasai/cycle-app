@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   before_action :set_search,         only: [:index, :search]
 
   def index
-    @articles = Article.includes(:user)
+    @articles = Article.includes(:user).order("created_at desc")
     @like = Like.new
   end
 

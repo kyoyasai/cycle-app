@@ -1,18 +1,25 @@
 class UsersController < ApplicationController
-  before_action :search_product, only: :show
+  before_action :set_user
+  before_action :set_articles
+  before_action :search_product
 
   def show
-    @user = User.find(params[:id])
-    @articles = @user.articles
   end
 
   def search
-    @user = User.find(params[:id])
-    @articles = @user.articles
     @results = @q.result.includes(:user)
   end
 
+  private
+  def set_user
+    @user = User.find(params[:id])
+  end
+
+  def set_articles
+    @articles = @user.articles
+  end
+
   def search_product
-    @q = Article.ransack(params[:q])
+    @q = @articles.ransack(params[:q])
   end
 end
