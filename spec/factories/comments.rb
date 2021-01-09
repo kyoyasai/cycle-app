@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :comment do
-    message     {"あいうえお"}
+    message     {Faker::Lorem.sentence}
     association :user
     association :article
   end
