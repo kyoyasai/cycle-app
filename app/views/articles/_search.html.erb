@@ -6,13 +6,13 @@
   <div class="search-block">
     <%= f.label :distance_eq, '走行距離で検索', class:"search-label" %>
     <br>
-    <%= f.search_field :distance_gteq, class:"distance-search-box" %>km ~ 
-    <%= f.search_field :distance_lteq, class:"distance-search-box" %>km
+    <%= f.number_field :distance_gteq, class:"distance-search-box" %>km ~ 
+    <%= f.number_field :distance_lteq, class:"distance-search-box" %>km
   </div>
   <div class="search-block">
-    <%= f.label :prefecture_name_eq, '都道府県で検索', class:"search-label" %>
+    <%= f.label :prefecture_id_eq, '都道府県で検索', class:"search-label" %>
     <br>
-    <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, {}, class:"prefecture-search-box" %>
+    <%= f.collection_select :prefecture_id_eq, Prefecture.where.not(id: 1), :id, :name, include_blank: "都道府県を選択", class:"prefecture-search-box" %>
   </div>
   <%= f.submit "検索", class: "search-btn" %>
 </div>
