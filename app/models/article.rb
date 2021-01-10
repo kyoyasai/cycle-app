@@ -1,7 +1,7 @@
 class Article < ApplicationRecord
   with_options presence: true do
     validates :title
-    validates :prefecture_id, numericality: { other_than: 1, message: 'Select' }
+    validates :prefecture_id, numericality: { other_than: 1, message: 'を選択してください' }
     validates :distance
     validates :content
   end
