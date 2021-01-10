@@ -23,12 +23,12 @@
 
 .bar-btn {
   border: none;
-  background-color: #f5f5f5;
+  /*background-color: #f5f5f5;*/
   margin-right: 25px;
 }
 
 .bar-btn:hover {
-  cursor: pointer
+  cursor: pointer;
 }
 
 .bar-contents {
