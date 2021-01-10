@@ -52,14 +52,18 @@
   color: #333333;
 }
 
-.login {
+.sign-up {
   text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
   color: #333333;
 }
 
-.sign-up {
+.login {
+  text-decoration: none;
+  margin-right: 2vw;
+  color: #333333;
+}
+
+.guest-login {
   text-decoration: none;
   color: #333333;
 }
