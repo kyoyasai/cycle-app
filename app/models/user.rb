@@ -22,4 +22,10 @@ class User < ApplicationRecord
   def like_judge(article)
     self.likes.exists?(article_id: article.id)
   end
+
+  def self.guest
+    find_or_create_by!(email: 'guest1@example.com', nickname: 'ゲスト', last_name: 'ゲスト', first_name: 'サンプル') do |user|
+      user.password = SecureRandom.hex(10)
+    end
+  end
 end
