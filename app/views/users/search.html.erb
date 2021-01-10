@@ -10,8 +10,12 @@
     <div class="mypage-name">
       <b><%= link_to @user.nickname, user_path(@user), class: "mypage-user-name" %></b>さんの投稿検索結果
     </div>
-    <% @results.each do |article| %>
-      <%= render partial: "/articles/article", locals: {article: article}%>
+    <% if @results.exists? %>
+      <% @results.each do |result| %>
+        <%= render partial: "/articles/article", locals: {article: result}%>
+      <% end %>
+    <% else %>
+      <div class="no-post"><b>条件に一致する投稿がありません</b></div>
     <% end %>
   </div>
 </div>

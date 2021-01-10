@@ -21,7 +21,6 @@
 }
 
 .prefecture-search-box {
-  font-size: 12px;
   height: 30px;
   width: 200px;
   background-color: #f5f5f5;
@@ -37,4 +36,9 @@
   border-radius: 4px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.no-post {
+  font-size: 18px;
+  margin-top: 10px;
 }

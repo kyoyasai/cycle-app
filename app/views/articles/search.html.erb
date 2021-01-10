@@ -6,9 +6,14 @@
       <%= render partial: "search", locals: {f: f} %>
     <% end %>
   </div>
+  
   <div class="post-list">
-    <% @results.each do |result| %>
-      <%= render partial: "article", locals: {article: result}%>
+    <% if @results.exists? %>
+      <% @results.each do |result| %>
+        <%= render partial: "article", locals: {article: result}%>
+      <% end %>
+    <% else %>
+      <div class="no-post"><b>条件に一致する投稿がありません</b></div>
     <% end %>
   </div>
 </div>
