@@ -15,22 +15,22 @@ describe Article do
       it 'titleが空だと登録できない' do
         @article.title = ""
         @article.valid?
-        expect(@article.errors.full_messages).to include("Title can't be blank")
+        expect(@article.errors.full_messages).to include("Titleを入力してください")
       end
       it '県名を選択しないと登録できない' do
         @article.prefecture_id = 1
         @article.valid?
-        expect(@article.errors.full_messages).to include ("Prefecture Select")
+        expect(@article.errors.full_messages).to include ("Prefectureを選択してください")
       end
       it 'distanceが空だと登録できない' do
         @article.distance = ""
         @article.valid?
-        expect(@article.errors.full_messages).to include ("Distance can't be blank")
+        expect(@article.errors.full_messages).to include ("Distanceを入力してください")
       end
       it 'contentが空だと登録できない' do
         @article.content = ""
         @article.valid?
-        expect(@article.errors.full_messages).to include ("Content can't be blank")
+        expect(@article.errors.full_messages).to include ("Contentを入力してください")
       end
     end
   end

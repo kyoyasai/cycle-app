@@ -15,7 +15,7 @@ describe Comment do
       it 'messageが空だと登録できない' do
         @comment.message = ""
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("Message can't be blank")
+        expect(@comment.errors.full_messages).to include("Messageを入力してください")
       end
     end
   end
