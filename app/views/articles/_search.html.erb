@@ -1,13 +1,14 @@
 <div class="search-content">
   <div class="keyword-search">
     <%= f.label :title_or_content_cont, 'キーワードで検索', class: "search-label" %>
+    <br>
     <%= f.search_field :title_or_content_cont, placeholder: "キーワードを入力", class: "search-box" %>
   </div>
   <div class="search-block">
     <%= f.label :distance_eq, '走行距離で検索', class:"search-label" %>
     <br>
-    <%= f.number_field :distance_gteq, class:"distance-search-box" %>km ~ 
-    <%= f.number_field :distance_lteq, class:"distance-search-box" %>km
+    <%= f.number_field :distance_gteq, class:"distance-search-box" %>&nbsp;km 〜
+    <%= f.number_field :distance_lteq, class:"distance-search-box" %>&nbsp;km
   </div>
   <div class="search-block">
     <%= f.label :prefecture_id_eq, '都道府県で検索', class:"search-label" %>
