@@ -1,32 +1,34 @@
 <header>
-  <div class='nav'>
-    <div class='header-logo'>
-      <%= link_to image_tag("cycle-logo.png", class:"app-logo"), root_path %>
-    </div>
-    <div class="header-site-name">
-      <p><%= link_to "CYCLE NOTE", root_path, class: "header-site-title" %></p>
-      <p><%= link_to "〜みんなのサイクリングの情報共有サイト〜", root_path, class: "header-site-subtitle" %></p>
-    </div>
-    <div class='header-right'>
-      <ul>
-      <% if user_signed_in? %>
-      <li class='right-top'>
-        <%= link_to "新規投稿", new_article_path, class: "new-post" %>
-      </li>
-      <div class='right-bottom'>
-        <li><%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+  <div class='container-fluid'>
+    <div class="row">
+      <div class='col-lg-2 d-none d-lg-block'>
+        <%= link_to image_tag("cycle-logo.png", class:"app-logo"), root_path %>
       </div>
-      <% else %>
-      <div class = 'right-top'>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <div class="col-lg-7 mt-3 header-site-name">
+        <p><%= link_to "CYCLE NOTE", root_path, class: "header-site-title" %></p>
+        <p><%= link_to "〜みんなのサイクリングの情報共有サイト〜", root_path, class: "header-site-subtitle" %></p>
       </div>
-      <div class="right-bottom">
-        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "guest-login" %></li>
+      <div class='col-lg-3 mt-lg-4 mt-2 mb-3 header-right'>
+        <ul>
+        <% if user_signed_in? %>
+        <li class='right-top'>
+          <%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %>さん
+        </li>
+        <div class='right-bottom'>
+          <li><%= link_to "新規投稿", new_article_path, class: "new-post" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+        </div>
+        <% else %>
+        <div class = 'right-top'>
+          <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        </div>
+        <div class="right-bottom">
+          <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+          <li><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "guest-login" %></li>
+        </div>
+        <% end %>
+        </ul>
       </div>
-      <% end %>
-      </ul>
     </div>
   </div>
 </header>

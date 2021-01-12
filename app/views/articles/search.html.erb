@@ -1,20 +1,22 @@
 <%= render "/shared/header"%>
 
-<div class="main-page", id="main">
-  <div class="search-list">
+<div class="container-fluid main-page">
+  <div class="row">
+  <div class="col-lg-3 offset-lg-0 offset-sm-4 offset-2 search-list">
     <%= search_form_for @q, url: search_articles_path, class: "search-form" do |f| %>
       <%= render partial: "search", locals: {f: f} %>
     <% end %>
   </div>
-  
-  <div class="post-list">
+  <div class="col-lg-9 offset-lg-0 offset-1 post-list">
     <% if @results.exists? %>
       <% @results.each do |result| %>
         <%= render partial: "article", locals: {article: result}%>
       <% end %>
     <% else %>
-      <div class="no-post"><b>条件に一致する投稿がありません</b></div>
+      <div class="offset-lg-0 offset-sm-3 offset-1 no-post"><b>条件に一致する投稿がありません</b></div>
     <% end %>
+    <%= paginate @results %>
+  </div>
   </div>
 </div>
 

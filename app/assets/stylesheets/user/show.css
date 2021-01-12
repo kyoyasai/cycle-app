@@ -1,15 +1,9 @@
 .mypage {
   background-color: #f5f5f5;
-  display: flex;
   height: 100%;
 }
 
-.mypage-search {
-  width: 30%;
-}
-
 .mypage-post {
-  width: 70%;
   padding: 16px 16px 8px;
 }
 

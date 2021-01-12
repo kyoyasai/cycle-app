@@ -1,22 +1,28 @@
 <%= render "/shared/header"%>
 
-<div class="mypage">
-  <div class="mypage-search">
+<div class="container-fluid mypage">
+  <div class="row">
+  <div class="col-lg-3 offset-lg-0 offset-sm-4 offset-2 mypage-search">
     <%= search_form_for @q, url: search_user_path, class: "search-form" do |f| %>
       <%= render partial: "/articles/search", locals: {f: f} %>
     <% end %>
   </div>
-  <div class="mypage-post">
-    <div class="mypage-name">
-      <b><%= link_to @user.nickname, user_path(@user), class: "mypage-user-name" %></b>さんの投稿検索結果
-    </div>
+  <div class="col-lg-9 offset-lg-0 offset-1 mypage-post">
     <% if @results.exists? %>
+      <div class="mypage-name">
+        <b><%= link_to @user.nickname, user_path(@user), class: "mypage-user-name" %></b>さんの投稿検索結果
+      </div>
       <% @results.each do |result| %>
         <%= render partial: "/articles/article", locals: {article: result}%>
       <% end %>
     <% else %>
-      <div class="no-post"><b>条件に一致する投稿がありません</b></div>
+      <div class="mypage-name">
+        <b><%= link_to @user.nickname, user_path(@user), class: "offset-lg-0 offset-sm-3 offset-1 mypage-user-name" %></b>さんの投稿検索結果
+      </div>
+      <div class="offset-lg-0 offset-sm-3 offset-1 no-post"><b>条件に一致する投稿がありません</b></div>
     <% end %>
+    <%= paginate @results %>
+  </div>
   </div>
 </div>
 
