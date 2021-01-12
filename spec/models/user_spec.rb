@@ -59,26 +59,6 @@ describe User do
         @user.valid?
         expect(@user.errors.full_messages).to include("Password confirmationとPasswordの入力が一致しません")
       end
-      it 'last_nameが空だと登録できない' do
-        @user.last_name = ""
-        @user.valid?
-        expect(@user.errors.full_messages).to include("Last nameを入力してください")
-      end
-      it 'last_nameが全角でないと登録できない' do
-        @user.last_name = "aaa"
-        @user.valid?
-        expect(@user.errors.full_messages).to include("Last nameは全角で記入してください")
-      end
-      it 'first_nameが空だと登録できない' do
-        @user.first_name = ""
-        @user.valid?
-        expect(@user.errors.full_messages).to include("First nameを入力してください")
-      end
-      it 'first_nameが全角でないと登録できない' do
-        @user.first_name = "aaa"
-        @user.valid?
-        expect(@user.errors.full_messages).to include("First nameは全角で記入してください")
-      end
     end
   end
 end
