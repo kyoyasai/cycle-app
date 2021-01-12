@@ -1,18 +1,21 @@
 <%= render "/shared/header"%>
 
-<div class="mypage">
-  <div class="mypage-search">
-    <%= search_form_for @q, url: search_user_path, class: "search-form" do |f| %>
-      <%= render partial: "/articles/search", locals: {f: f} %>
-    <% end %>
-  </div>
-  <div class="mypage-post">
-    <div class="mypage-name">
-      <b><%= @user.nickname %></b>さんの投稿一覧
+<div class="container-fluid mypage">
+  <div class="row">
+    <div class="col-lg-3 offset-lg-0 offset-sm-4 offset-3 mypage-search">
+      <%= search_form_for @q, url: search_user_path, class: "search-form" do |f| %>
+        <%= render partial: "/articles/search", locals: {f: f} %>
+      <% end %>
     </div>
-    <% @articles.each do |article| %>
-      <%= render partial: "/articles/article", locals: {article: article}%>
-    <% end %>
+    <div class="col-lg-9 offset-lg-0 offset-1 mypage-post">
+      <div class="mypage-name">
+        <b><%= @user.nickname %></b>さんの投稿一覧
+      </div>
+      <% @articles.each do |article| %>
+        <%= render partial: "/articles/article", locals: {article: article}%>
+      <% end %>
+      <%= paginate @articles %>
+    </div>
   </div>
 </div>
 
