@@ -39,16 +39,6 @@
     </div>
     <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
   </div>
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">お名前(全角)</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <div class='input-name-wrap'>
-      <%= f.text_area :last_name, class:"input-name", id:"last-name", placeholder:"例) 自転車" %>
-      <%= f.text_area :first_name, class:"input-name", id:"first-name", placeholder:"例) 太郎" %>
-    </div>
-  </div>
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
   </div>
