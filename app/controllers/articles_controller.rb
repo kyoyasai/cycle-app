@@ -47,7 +47,7 @@ class ArticlesController < ApplicationController
 
   def search
     @articles = Article.search(params[:keyword])
-    @results = @q.result.includes(:user)
+    @results = @q.result.includes(:user).page(params[:page]).per(10).order("created_at desc")
   end
 
   private

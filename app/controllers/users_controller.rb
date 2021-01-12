@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def set_articles
-    @articles = @user.articles
+    @articles = @user.articles.includes(:user).page(params[:page]).per(10).order("created_at desc")
   end
 
   def search_product
