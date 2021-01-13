@@ -9,10 +9,6 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nickname
-    with_options format: { with: /\A[ぁ-んァ-ヶ一-龥々]+\z/ , message: 'は全角で記入してください'} do
-      validates :last_name
-      validates :first_name
-    end
   end
 
   has_many :articles
@@ -24,7 +20,7 @@ class User < ApplicationRecord
   end
 
   def self.guest
-    find_or_create_by!(email: 'guest1@example.com', nickname: 'ゲスト', last_name: 'ゲスト', first_name: 'サンプル') do |user|
+    find_or_create_by!(email: 'guest1@example.com', nickname: 'ゲスト') do |user|
       user.password = SecureRandom.hex(10)
     end
   end

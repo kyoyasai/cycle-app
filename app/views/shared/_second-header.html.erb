@@ -1,3 +1,13 @@
-<header class='second-header'>
-  <%= link_to image_tag("cycle-logo.png", class:"second-logo"), "/" %>
+<header>
+  <div class='container-fluid'>
+    <div class="row">
+      <div class='col-lg-2 d-none d-lg-block'>
+        <%= link_to image_tag("cycle-logo.png", class:"app-logo"), root_path %>
+      </div>
+      <div class="col-lg-8 mt-3 header-site-name">
+        <p><%= link_to "CYCLE NOTE", root_path, class: "header-site-title" %></p>
+        <p><%= link_to "〜みんなのサイクリング情報共有サイト〜", root_path, class: "header-site-subtitle" %></p>
+      </div>
+    </div>
+  </div>
 </header>
