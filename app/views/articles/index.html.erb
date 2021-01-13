@@ -7,7 +7,7 @@
         <%= render partial: "search", locals: {f: f} %>
       <% end %>
     </div>
-    <div class="col-lg-9 offset-lg-0 offset-1 post-list">
+    <div class="col-lg-9 offset-lg-0 offset-md-2 offset-sm-1 offset-0 post-list">
       <% @articles.each do |article| %>
         <%= render partial: "article", locals: {article: article}%>
       <% end %>
