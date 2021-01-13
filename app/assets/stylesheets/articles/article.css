@@ -1,14 +1,10 @@
 /* 1行目 */
 
-.post-show {
-  margin-bottom: 20px;
-  display: flex;
-}
-
-.post-text {
-  width: 470px;
+.post-all {
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-bottom: 20px;
+  width: 700px;
   padding: 4px;
 }
 
@@ -57,6 +53,19 @@
 
 /*2,3行目*/
 
+.post-show {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-show1 {
+  width: 50%;
+}
+
+.main-show2 {
+  width: 690px;
+}
+
 .second-show {
   display: flex;
   justify-content: flex-start;
@@ -79,6 +88,13 @@
   margin-bottom: 10px;
 }
 
+/*画像投稿部*/
+.post-image {
+  width: 50%;
+  text-align: center;
+}
+/*/画像投稿部*/
+
 /*2,3行目*/
 
 
@@ -87,8 +103,9 @@
 .bottom-show {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   color: slategray;
+  width: 700px;
 }
 
 .like {
@@ -125,12 +142,21 @@
 /*/最終行*/
 
 
-/*画像投稿部*/
-.post-image {
+
+/*レスポンシブ対応*/
+.post-all2 {
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-bottom: 20px;
+  width: 470px;
   padding: 4px;
-  width: 220px;
-  text-align: center;
 }
-/*/画像投稿部*/
+
+.bottom-show2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: slategray;
+  width: 470px;
+}
+/*レスポンシブ対応*/

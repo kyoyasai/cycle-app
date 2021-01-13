@@ -1,4 +1,4 @@
-<div class="post-show">
+<div class="d-none d-lg-block post-all">
   <div class="post-text">
     <div class="first-show">
       <div class="post-title">
@@ -9,36 +9,101 @@
         <% end %>
       </div>
       <% if user_signed_in? && current_user.id == article.user_id %>
-        <div class="bar-btn", id="bar">
-          ...
-          <ul class="bar-contents", id="pull-down" role="menu">
-            <li class="bar-list" role="presentation">
-              <%= link_to '編集', edit_article_path(article.id), class: "list-btn" %>
-            </li>
-            <li class="bar-list" role="presentation">
-              <%= link_to '削除', article_path(article.id), method: :delete, class: "list-btn" %>
-            </li>
-          </ul>
-        </div>
+      <div class="bar-btn", id="bar">
+        ...
+        <ul class="bar-contents", id="pull-down" role="menu">
+          <li class="bar-list" role="presentation">
+            <%= link_to '編集', edit_article_path(article.id), class: "list-btn" %>
+          </li>
+          <li class="bar-list" role="presentation">
+            <%= link_to '削除', article_path(article.id), method: :delete, class: "list-btn" %>
+          </li>
+        </ul>
+      </div>
       <% end %>
     </div>
-    <div class="second-show">
-      <div><%= article.prefecture.name %></div>
-      <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
-    </div>
-    <div class="content-show">
-      <%= safe_join(article.content.split("\n"), tag(:br)) %>
-    </div>
-    <div class="bottom-show">
-      <div class="like", id="article_<%= article.id %>">
-        <%= render partial: "likes/like", locals: {article: article} %>
-      </div>
-      <div class = "bottom-right">
-        <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
+    <div class="d-none d-lg-block">
+      <div class="post-show">
+        <% if article.image.attached? %>
+        <div class="main-show1">
+        <% else %>
+        <div class="main-show2">
+        <% end %>
+          <div class="second-show">
+            <div><%= article.prefecture.name %></div>
+            <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
+          </div>
+          <div class="content-show">
+            <%= safe_join(article.content.split("\n"), tag(:br)) %>
+          </div>
+        </div>
+        <% if article.image.attached? %>
+        <div class="post-image d-none d-lg-block">
+          <b>画像タイトル</b>
+          <div>
+            <%= link_to image_tag(article.image.variant(resize: '200x200')), article_path(article.id) %>
+            <%#= image_tag article.image.variant(resize: '200x200') %>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
-  <div class="post-image d-none d-lg-block ms-lg-1">
-    <b>旅の一枚</b>
+  <div class="bottom-show">
+    <div class="like", id="article_<%= article.id %>">
+      <%= render partial: "likes/like", locals: {article: article} %>
+    </div>
+    <div class = "bottom-right">
+      <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
+    </div>
   </div>
 </div>
+
+
+<%#レスポンシブ対応%>
+<div class="d-lg-none post-all2">
+  <div class="post-text">
+    <div class="first-show">
+      <div class="post-title">
+        <% unless current_page?(article_path(article.id)) %>
+          <b><%= link_to article.title, article_path(article.id), class: "post-title-btn" %></b>
+        <% else %>
+          <b><%= article.title %></b>
+        <% end %>
+      </div>
+      <% if user_signed_in? && current_user.id == article.user_id %>
+      <div class="bar-btn", id="bar">
+        ...
+        <ul class="bar-contents", id="pull-down" role="menu">
+          <li class="bar-list" role="presentation">
+            <%= link_to '編集', edit_article_path(article.id), class: "list-btn" %>
+          </li>
+          <li class="bar-list" role="presentation">
+            <%= link_to '削除', article_path(article.id), method: :delete, class: "list-btn" %>
+          </li>
+        </ul>
+      </div>
+      <% end %>
+    </div>
+    <div class="d-lg-none">
+      <div class="main-show3">
+        <div class="second-show">
+            <div><%= article.prefecture.name %></div>
+            <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
+        </div>
+        <div class="content-show">
+          <%= safe_join(article.content.split("\n"), tag(:br)) %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-show2">
+    <div class="like", id="article_<%= article.id %>">
+      <%= render partial: "likes/like", locals: {article: article} %>
+    </div>
+    <div class = "bottom-right">
+      <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
+    </div>
+  </div>
+</div>
+<%#/レスポンシブ対応%>
