@@ -22,31 +22,15 @@
       </div>
       <% end %>
     </div>
-    <div class="d-none d-lg-block">
-      <div class="post-show">
-        <% if article.image.attached? %>
-        <div class="main-show1">
-        <% else %>
-        <div class="main-show2">
-        <% end %>
-          <div class="second-show">
+      <div class="main-show2">
+        <div class="second-show">
             <div><%= article.prefecture.name %></div>
             <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
-          </div>
-          <div class="content-show">
-            <%= safe_join(article.content.split("\n"), tag(:br)) %>
-          </div>
         </div>
-        <% if article.image.attached? %>
-        <div class="post-image d-none d-lg-block">
-          <b>画像タイトル</b>
-          <div>
-            <%= link_to image_tag(article.image.variant(resize: '200x200')), article_path(article.id) %>
-          </div>
+        <div class="content-show">
+          <%= safe_join(article.content.split("\n"), tag(:br)) %>
         </div>
-        <% end %>
       </div>
-    </div>
   </div>
   <div class="bottom-show">
     <div class="like", id="article_<%= article.id %>">
@@ -57,6 +41,15 @@
     </div>
   </div>
 </div>
+
+<% if article.image.attached? %>
+  <div class="d-none d-lg-block post-image2">
+    <b>画像タイトル</b>
+    <div>
+      <%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %>
+    </div>
+  </div>
+<% end %>
 
 
 <%#レスポンシブ対応%>
@@ -105,4 +98,14 @@
     </div>
   </div>
 </div>
+
+<% if article.image.attached? %>
+  <div class="d-lg-none post-image3">
+    <b>画像タイトル</b>
+    <div>
+      <%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %>
+    </div>
+  </div>
+<% end %>
+
 <%#/レスポンシブ対応%>
