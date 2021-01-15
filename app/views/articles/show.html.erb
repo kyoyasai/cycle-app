@@ -1,39 +1,16 @@
 <%= render "/shared/header"%>
 
 <div class="container-fluid show-main">
-<div class="row">
-<div class="col-xl-6 offset-xl-3 col-md-8 offset-md-2 offset-sm-1">
-  <div class="show-post">
-    <%= render partial: "articles/article2", locals: {article: @article}%>
-  </div>
-  <% if user_signed_in? %>
-  <div class="comment-form">
-    <%= form_with model: [@article, @comment], local: true do |f| %>
-      <%= render 'shared/error_messages', model: f.object %>
-      <div class="comment-main">
-        <%= f.text_area :message, placeholder: "コメントする", class: "comment-text" %>
-        <%= f.submit '送信', class: "comment-btn" %>
+  <div class="row">
+    <div class="col-xl-6 offset-xl-3 col-md-8 offset-md-2 offset-sm-1">
+      <div class="show-post">
+        <%= render partial: "articles/article2", locals: {article: @article}%>
       </div>
-    <% end %>
-  </div>
-  <% end %>
-  <% if @comments.exists? %>
-  <div class="comment-lists">
-    <p class=comment-lists-label>コメント一覧</p>
-    <% @comments.each_with_index do |comment, idx| %>
-      <div class="comment-show">
-        <div class="commnet-show-message">
-          <%= idx + 1 %>.<%= comment.message %>
-        </div>
-        <div class="comment-show-name">
-        <%= link_to comment.user.nickname, user_path(comment.user), class: "comment-user"%>
-        </div>
+      <div class="comment-post">
+        <%= render partial: "articles/comment", locals: {article: @article, comment: @comment} %>
       </div>
-    <% end %>
+    </div>
   </div>
-  <% end %>
-</div>
-</div>
 </div>
 
 <%= render "/shared/footer"%>

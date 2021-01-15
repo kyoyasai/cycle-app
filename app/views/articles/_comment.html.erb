@@ -1,0 +1,63 @@
+<%# lg以下非表示 %>
+<div class="d-none d-lg-block">
+  <% if user_signed_in? %>
+  <div class="comment-form1">
+    <%= form_with model: [article, comment], local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+        <div class="comment-main1">
+          <%= f.text_area :message, placeholder: "コメントする", class: "comment-text1" %>
+          <%= f.submit '送信', class: "comment-btn1" %>
+        </div>
+      <% end %>
+  </div>
+  <% end %>
+
+  <% if @comments.exists? %>
+  <div class="comment-lists1">
+    <p class=comment-lists-label>コメント一覧</p>
+    <% @comments.each_with_index do |comment, idx| %>
+      <div class="comment-show">
+        <div class="commnet-show-message">
+          <%= idx + 1 %>.<%= comment.message %>
+        </div>
+        <div class="comment-show-name">
+          <%= link_to comment.user.nickname, user_path(comment.user), class: "comment-user"%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>
+<%# lg以下非表示 %>
+
+<%# lg以上非表示 %>
+<div class="d-lg-none">
+  <% if user_signed_in? %>
+  <div class="comment-form2">
+    <%= form_with model: [article, comment], local: true do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+        <div class="comment-main2">
+          <%= f.text_area :message, placeholder: "コメントする", class: "comment-text2" %>
+          <div style="text-align: center;"><%= f.submit '送信', class: "comment-btn2" %></div>
+        </div>
+      <% end %>
+  </div>
+  <% end %>
+
+  <% if @comments.exists? %>
+  <div class="comment-lists2">
+    <p class=comment-lists-label>コメント一覧</p>
+    <% @comments.each_with_index do |comment, idx| %>
+      <div class="comment-show">
+        <div class="commnet-show-message">
+          <%= idx + 1 %>.<%= comment.message %>
+        </div>
+        <div class="comment-show-name">
+          <%= link_to comment.user.nickname, user_path(comment.user), class: "comment-user"%>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>
+<%#/ lg以上非表示 %>
