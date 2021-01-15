@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(item_params)
+    @article = Article.new(article_params)
     if @article.valid?
       @article.save
       redirect_to root_path
@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    if @article.update(item_params)
+    if @article.update(article_params)
       redirect_to root_path
     else
       render :edit
@@ -51,8 +51,8 @@ class ArticlesController < ApplicationController
   end
 
   private
-  def item_params
-    params.require(:article).permit(:title, :prefecture_id, :distance, :content, :evalustion).merge(user_id: current_user.id)
+  def article_params
+    params.require(:article).permit(:title, :prefecture_id, :distance, :content, :image).merge(user_id: current_user.id)
   end
 
   def set_article
