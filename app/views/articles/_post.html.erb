@@ -7,11 +7,12 @@
       <div class="distance-unit">km</div>
     </div>
   </div>
+  <div class="post-third">
+    <div><%= f.file_field :image %></div>
+    <div id="preview-box"></div>
+  </div>
   <div class="post-content">
     <%= f.text_area :content, class: "long-text", placeholder: "できごと" %>
-  </div>
-  <div>
-    <%= f.file_field :image %>
   </div>
 </div>
 

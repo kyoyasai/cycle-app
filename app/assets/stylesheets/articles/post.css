@@ -1,8 +1,12 @@
 /* 投稿フォーム */
+
+/*1行目*/
 .post-form {
   padding: 2vh 0;
 }
+/*/1行目*/
 
+/*2行目*/
 .post-second {
   margin-top: 2vh;
   display: flex;
@@ -30,6 +34,19 @@
   padding-top: 30px;
   margin-left: 10px;
 }
+/*/2行目*/
+
+/*3行目*/
+.post-third {
+  display: flex;
+  margin: 2vh 0;
+}
+.post-preview {
+  height: 120px;
+  width: 120px;
+  border-radius: 4px;
+}
+/*/3行目*/
 
 .post-content {
   margin-top: 2vh;
