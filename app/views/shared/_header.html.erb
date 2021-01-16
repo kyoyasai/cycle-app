@@ -8,17 +8,19 @@
         <p><%= link_to "CYCLE NOTE", root_path, class: "header-site-title" %></p>
         <p><%= link_to "〜みんなのサイクリング情報共有サイト〜", root_path, class: "header-site-subtitle" %></p>
       </div>
-      <div class='col-lg-3 mt-lg-4 mt-2 mb-3 header-right'>
-        <ul>
+      <div class='col-lg-3 mt-lg-4 mt-2 mb-3 header-right'>        
         <% if user_signed_in? %>
-        <li class='right-top'>
-          <%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %>さん
-        </li>
+        <ul>
+        <div class='right-top'>
+          <li><%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %>さん</li>
+        </div>
         <div class='right-bottom'>
           <li><%= link_to "新規投稿", new_article_path, class: "new-post" %></li>
           <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
         </div>
+        </ul>
         <% else %>
+        <ul>
         <div class = 'right-top'>
           <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
         </div>
@@ -26,8 +28,8 @@
           <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
           <li><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post, class: "guest-login" %></li>
         </div>
-        <% end %>
         </ul>
+        <% end %>
       </div>
     </div>
   </div>
