@@ -1,11 +1,13 @@
 <%= render "/shared/header"%>
 
-<div class="post-page">
-  <div class="post-main">
+<div class="container-fluid post-page">
+  <div class="row">
+  <div class="offset-lg-1 offset-2 post-main">
     <%= form_with model: @article, id: "article-post", local: true do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
       <%= render partial: 'post', locals: {f: f} %>
     <% end %>
+  </div>
   </div>
 </div>
 
