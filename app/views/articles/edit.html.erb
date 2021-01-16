@@ -1,12 +1,14 @@
 <%# CSSはnew.cssと共通%>
 <%= render "/shared/header"%>
 
-<div class="post-page">
-  <div class="post-main">
-    <%= form_with model: @article, id: "article-post", local: true do |f| %>
-      <%= render 'shared/error_messages', model: f.object %>
-      <%= render partial: 'post', locals: {f: f} %>
-    <% end %>
+<div class="container-fluid post-page">
+  <div class="row">
+    <div class="col-lg-11 offset-lg-1 col-12 post-main">
+      <%= form_with model: @article, id: "article-post", local: true do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
+        <%= render partial: 'post', locals: {f: f} %>
+      <% end %>
+    </div>
   </div>
 </div>
 
