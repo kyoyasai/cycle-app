@@ -1,21 +1,57 @@
-<div class="post-form">
-  <%= f.text_field :title, class: "short-text", placeholder: "タイトル" %>
-  <div class="post-second">
-    <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"post-prefecture"}) %>
-    <div class="distance-form">
-      <%= f.text_field :distance, class: "distance-text", placeholder: "走行距離" %>
-      <div class="distance-unit">km</div>
+<%# lg以下非表示 %>
+<div class="d-none d-lg-block">
+  <div class="post-form">
+    <%= f.text_field :title, class: "short-text", placeholder: "タイトル" %>
+    <div class="post-second1">
+      <div class="prefecture-form">
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"post-prefecture"}) %>
+      </div>
+      <div class="distance-form1">
+        <%= f.text_field :distance, class: "distance-text", placeholder: "走行距離" %>
+        <div class="distance-unit">km</div>
+      </div>
+    </div>
+    <div class="post-third">
+      <div><%= f.file_field :image %></div>
+      <div id="preview-box"></div>
+    </div>
+    <div class="post-content">
+      <%= f.text_area :content, class: "long-text1", placeholder: "できごと" %>
     </div>
   </div>
-  <div class="post-content">
-    <%= f.text_area :content, class: "long-text", placeholder: "できごと" %>
-  </div>
-  <div>
-    <%= f.file_field :image %>
-  </div>
-</div>
 
-<div class="form-btn-contents">
-  <%= f.submit "投稿する" ,class:"form-btn" %>
-  <%=link_to 'もどる', root_path, class:"back-btn" %>
+  <div class="form-btn-contents">
+    <%= f.submit "投稿する", class: "form-btn" %>
+    <%=link_to 'もどる', root_path, class: "back-btn1" %>
+  </div>
 </div>
+<%#/ lg以下非表示 %>
+
+<%# lg以下表示 %>
+<div class="d-lg-none">
+  <div class="post-form">
+    <%= f.text_field :title, class: "short-text", placeholder: "タイトル" %>
+    <div class="post-second2">
+      <div class="prefecture-form">
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"post-prefecture"}) %>
+      </div>
+      <div class="distance-form2">
+        <%= f.text_field :distance, class: "distance-text", placeholder: "走行距離" %>
+        <div class="distance-unit">km</div>
+      </div>
+    </div>
+    <div class="post-third">
+      <div><%= f.file_field :image %></div>
+      <div id="preview-box"></div>
+    </div>
+    <div class="post-content">
+      <%= f.text_area :content, class: "long-text2", placeholder: "できごと" %>
+    </div>
+  </div>
+
+  <div class="form-btn-contents2">
+    <%= f.submit "投稿する", class: "form-btn" %>
+    <div class="btn-div"><%= link_to 'もどる', root_path, class: "back-btn2" %></div>
+  </div>
+</div>
+<%#/ lg以下表示 %>

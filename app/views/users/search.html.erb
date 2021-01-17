@@ -2,12 +2,12 @@
 
 <div class="container-fluid mypage">
   <div class="row">
-  <div class="col-lg-3 offset-lg-0 offset-sm-4 offset-2 mypage-search">
+  <div class="col-lg-3 offset-lg-0 col-sm-8 offset-sm-4 col-9 offset-3 mypage-search">
     <%= search_form_for @q, url: search_user_path, class: "search-form" do |f| %>
       <%= render partial: "/articles/search", locals: {f: f} %>
     <% end %>
   </div>
-  <div class="col-lg-9 offset-lg-0 offset-1 mypage-post">
+  <div class="col-lg-9 offset-lg-0 col-md-10 offset-md-2 col-sm-11 offset-sm-1 offset-0 mypage-post">
     <% if @results.exists? %>
       <div class="mypage-name">
         <b><%= link_to @user.nickname, user_path(@user), class: "mypage-user-name" %></b>さんの投稿検索結果
