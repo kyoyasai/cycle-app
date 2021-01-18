@@ -6,7 +6,11 @@ class ArticlesController < ApplicationController
   before_action :set_search,         only: [:index, :search]
 
   def index
-    @articles = Article.includes(:user).page(params[:page]).per(10).order("created_at desc")
+    if params[:key] == "1"
+      @articles = Kaminari.paginate_array(Article.like_sort_result).page(params[:page]).per(10)
+    else
+      @articles = Article.includes(:user).page(params[:page]).per(10).order("created_at desc")
+    end
     @like = Like.new
   end
 
@@ -49,6 +53,7 @@ class ArticlesController < ApplicationController
     @articles = Article.search(params[:keyword])
     @results = @q.result.includes(:user).page(params[:page]).per(10).order("created_at desc")
   end
+
 
   private
   def article_params
