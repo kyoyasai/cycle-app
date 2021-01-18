@@ -8,6 +8,11 @@
       <% end %>
     </div>
     <div class="col-lg-9 offset-lg-0 col-md-10 offset-md-2 col-sm-11 offset-sm-1 offset-0 post-list">
+      <div class="post-sort">
+        <p class="sort-label">並び替え</p>
+        <%= link_to "投稿日時順", root_path, class: "sort-list" %>
+        <%= link_to "いいねが多い順", root_path(key: 1), class: "sort-list" %>
+      </div>
       <% @articles.each do |article| %>
         <%= render partial: "article", locals: {article: article}%>
       <% end %>
