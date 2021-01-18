@@ -1,4 +1,15 @@
 ja:
+  activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+     article:
+       title: タイトル
+       prefecture_id: 都道府県
+       distance: 距離
+       content: できごと
+     comment:
+       message: コメント
   views:
     pagination:
       first: "&laquo; 最初"
