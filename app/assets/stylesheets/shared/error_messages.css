@@ -1,11 +1,17 @@
 .error-alert {
   display: flex;
   justify-content: center;
-  margin-bottom: 5vh;
+  margin-bottom: 20px;
 }
 
-.error-message {
-  font-size: 1.3vw;
+.error-message1 {
+  font-size: 14px;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+}
+
+.error-message2 {
+  font-size: 12px;
   list-style: circle;
   color: rgb(182, 48, 0);
 }
