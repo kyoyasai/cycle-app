@@ -16,8 +16,17 @@
   height: 20px;
 }
 
+.first-show-left {
+  display: flex;
+}
+
 .post-title-btn {
   text-decoration: none;
+}
+
+.post-time {
+  margin-left: 10px;
+  color: slategray;
 }
 
 .bar-btn {

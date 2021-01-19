@@ -1,12 +1,13 @@
 <div class="d-none d-lg-block post-all">
   <div class="post-text">
     <div class="first-show">
-      <div class="post-title">
+      <div class="first-show-left">
         <% unless current_page?(article_path(article.id)) %>
           <b><%= link_to article.title, article_path(article.id), class: "post-title-btn" %></b>
         <% else %>
           <b><%= article.title %></b>
         <% end %>
+        <div class="post-time"><%= l article.created_at, format: :short %></div>
       </div>
       <% if user_signed_in? && current_user.id == article.user_id %>
       <div class="bar-btn", id="bar">
@@ -56,12 +57,13 @@
 <div class="d-lg-none post-all2">
   <div class="post-text">
     <div class="first-show">
-      <div class="post-title">
+      <div class="first-show-left">
         <% unless current_page?(article_path(article.id)) %>
           <b><%= link_to article.title, article_path(article.id), class: "post-title-btn" %></b>
         <% else %>
           <b><%= article.title %></b>
         <% end %>
+        <div class="post-time"><%= l article.created_at, format: :short %></div>
       </div>
       <% if user_signed_in? && current_user.id == article.user_id %>
       <div class="bar-btn", id="bar">
