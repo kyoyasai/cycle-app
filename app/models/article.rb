@@ -13,14 +13,6 @@ class Article < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
 
-  def self.search(search)
-    if search != ""
-      Article.where('title LIKE(?) OR content LIKE(?)', "%#{search}%", "%#{search}%")
-    else
-      Article.all
-    end
-  end
-
   def self.like_sort
     self.includes(:user).joins(:likes).group(:article_id).order('count(article_id) desc').order("created_at desc")
   end

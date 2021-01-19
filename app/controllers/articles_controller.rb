@@ -50,7 +50,6 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    @articles = Article.search(params[:keyword])
     @results = @q.result.includes(:user).page(params[:page]).per(10).order("created_at desc")
   end
 
