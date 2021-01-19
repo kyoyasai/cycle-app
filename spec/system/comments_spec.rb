@@ -4,7 +4,7 @@ RSpec.describe "Comments", type: :system do
   before do
     @user = FactoryBot.create(:user)
     @article = FactoryBot.create(:article)
-    @comment = FactoryBot.create(:comment)
+    @comment = FactoryBot.create(:comment, message: Faker::Lorem.sentence)
   end
 
   context 'コメント投稿ができるとき' do
@@ -18,7 +18,7 @@ RSpec.describe "Comments", type: :system do
       # 記事詳細ページに移動する
       visit article_path(@article)
       # コメントフォームが存在する
-      expect(page).to have_selector '.comment-text'
+      expect(page).to have_selector '.comment-input'
       # フォームにコメントを入力する
       fill_in 'comment[message]', with: @comment.message
       # 送信するとCommentモデルのカウントが1上がる

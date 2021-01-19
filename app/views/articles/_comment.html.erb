@@ -5,7 +5,7 @@
     <%= form_with model: [article, comment], local: true do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
         <div class="comment-main1">
-          <%= f.text_area :message, placeholder: "コメントする", class: "comment-text1" %>
+          <div class="comment-text1"><%= f.text_area :message, placeholder: "コメントする", class: "comment-input" %></div>
           <%= f.submit '送信', class: "comment-btn1" %>
         </div>
       <% end %>
@@ -37,7 +37,7 @@
     <%= form_with model: [article, comment], local: true do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
         <div class="comment-main2">
-          <%= f.text_area :message, placeholder: "コメントする", class: "comment-text2" %>
+          <div class="comment-text2"><%= f.text_area :message, placeholder: "コメントする", class: "comment-input" %></div>
           <div style="text-align: center;"><%= f.submit '送信', class: "comment-btn2" %></div>
         </div>
       <% end %>
