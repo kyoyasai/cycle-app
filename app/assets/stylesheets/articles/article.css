@@ -117,7 +117,7 @@
   width: 700px;
 }
 
-.like {
+.bottom-left {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -193,4 +193,14 @@
   margin-bottom: 30px;
 }
 
+.show-link {
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.show-link-image {
+  padding-top: 4px;
+  font-size: 12px;
+  text-decoration: none;
+}
 /*/article2*/

@@ -47,7 +47,7 @@
     </div>
   </div>
   <div class="bottom-show">
-    <div class="like", id="article_<%= article.id %>">
+    <div class="bottom-left", id="article_<%= article.id %>">
       <%= render partial: "likes/like", locals: {article: article} %>
     </div>
     <div class = "bottom-right">
@@ -94,8 +94,14 @@
     </div>
   </div>
   <div class="bottom-show2">
-    <div class="like", id="article_<%= article.id %>">
+    <div class="bottom-left", id="article_<%= article.id %>">
       <%= render partial: "likes/like", locals: {article: article} %>
+      <% if article.image.attached? %>
+        <%= link_to '詳細', article_path(article), class:"show-link" %>
+        <%= link_to '(画像あり)', article_path(article), class:"show-link-image" %>
+      <% else %>
+        <%= link_to '詳細', article_path(article), class:"show-link" %>
+      <% end %>
     </div>
     <div class = "bottom-right">
       <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
