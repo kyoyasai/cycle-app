@@ -15,12 +15,18 @@
         <div class="distance-unit">km</div>
       </div>
     </div>
-    <div class="post-third">
-      <div><%= f.file_field :image %></div>
-      <div id="preview-box"></div>
-    </div>
     <div class="post-content1">
       <%= f.text_area :content, class: "long-text", placeholder: "できごと" %>
+    </div>
+    <div class="image-form1">
+      <div class="image-post-label">画像を投稿<span class="badge bg-secondary badge-info">任意</span></div>
+      <div class="image-title">
+        <%= f.text_field :image_title, class: "short-text", placeholder: "画像タイトル" %>
+      </div>
+      <div class="image-field">
+        <%= f.file_field :image %>
+        <div id="preview-box"></div>
+      </div>
     </div>
   </div>
 
@@ -47,12 +53,18 @@
         <div class="distance-unit">km</div>
       </div>
     </div>
-    <div class="post-third">
-      <div><%= f.file_field :image %></div>
-      <div id="preview-box"></div>
-    </div>
     <div class="post-content2">
       <%= f.text_area :content, class: "long-text", placeholder: "できごと" %>
+    </div>
+    <div class="image-form2">
+      <div class="image-post-label">画像を投稿<span class="badge bg-secondary badge-info">任意</span></div>
+      <div class="image-title">
+        <%= f.text_field :image_title, class: "short-text", placeholder: "画像タイトル" %>
+      </div>
+      <div class="image-field">
+        <%= f.file_field :image %>
+        <div id="preview-box"></div>
+      </div>
     </div>
   </div>
 

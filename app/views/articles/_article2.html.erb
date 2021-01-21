@@ -45,10 +45,8 @@
 
 <% if article.image.attached? %>
   <div class="d-none d-lg-block post-image2">
-    <b>画像タイトル</b>
-    <div>
-      <%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %>
-    </div>
+    <div><b><%= article.image_title %></b></div>
+    <div><%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %></div>
   </div>
 <% end %>
 
@@ -103,10 +101,8 @@
 
 <% if article.image.attached? %>
   <div class="d-lg-none post-image3">
-    <b>画像タイトル</b>
-    <div>
-      <%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %>
-    </div>
+    <div><b><%= article.image_title %></b></div>
+    <div><%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %></div>
   </div>
 <% end %>
 

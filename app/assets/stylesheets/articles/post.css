@@ -64,9 +64,25 @@
 /*/2行目*/
 
 /*3行目*/
-.post-third {
-  display: flex;
+.image-form1 {
   margin: 16px 0;
+  border-radius: 4px;
+  width: 500px;
+  padding: 8px;
+}
+.image-post-label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.badge-info {
+  margin-left: 10px;
+}
+.image-title {
+  margin-bottom: 10px;
+}
+.image-field {
+  display: flex;
 }
 .post-preview {
   height: 120px;
@@ -139,9 +155,20 @@
   margin-top: 16px;
 }
 
+.post-third {
+  display: flex;
+}
+
 .post-content2 {
   margin-top: 16px;
   width: 350px;
+}
+
+.image-form2 {
+  margin: 16px 0;
+  border-radius: 4px;
+  width: 350px;
+  padding: 8px;
 }
 
 .form-btn-contents2 {

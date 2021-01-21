@@ -5,6 +5,7 @@ class CreateArticles < ActiveRecord::Migration[6.0]
       t.integer    :prefecture_id, null: false
       t.float      :distance,      null: false
       t.text       :content,       null: false
+      t.string     :image_title
       t.references :user,          foreign_key: true
       t.timestamps
     end

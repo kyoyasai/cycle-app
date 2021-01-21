@@ -23,31 +23,28 @@
       </div>
       <% end %>
     </div>
-    <%#div class="d-none d-lg-block"%>
-      <div class="post-show">
-        <% if article.image.attached? %>
-        <div class="main-show1">
-        <% else %>
-        <div class="main-show2">
-        <% end %>
-          <div class="second-show">
-            <div><%= article.prefecture.name %></div>
-            <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
-          </div>
-          <div class="content-show">
-            <%= safe_join(article.content.split("\n"), tag(:br)) %>
-          </div>
+
+    <div class="post-show">
+    <% if article.image.attached? %>
+      <div class="main-show1">
+    <% else %>
+      <div class="main-show2">
+    <% end %>
+        <div class="second-show">
+          <div><%= article.prefecture.name %></div>
+          <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
         </div>
-        <% if article.image.attached? %>
-        <div class="post-image d-none d-lg-block">
-          <b>画像タイトル</b>
-          <div>
-            <%= link_to image_tag(article.image.variant(resize: '200x200')), article_path(article.id) %>
-          </div>
+        <div class="content-show">
+          <%= safe_join(article.content.split("\n"), tag(:br)) %>
         </div>
-        <% end %>
       </div>
-    <%#/div%>
+      <% if article.image.attached? %>
+        <div class="post-image d-none d-lg-block">
+          <div><b><%= article.image_title %></b></div>
+          <div><%= link_to image_tag(article.image.variant(resize: '200x200')), article_path(article.id) %></div>
+        </div>
+      <% end %>
+    </div>
   </div>
   <div class="bottom-show">
     <div class="like", id="article_<%= article.id %>">
@@ -86,17 +83,15 @@
       </div>
       <% end %>
     </div>
-    <%#div class="d-lg-none"%>
-      <div class="main-show3">
-        <div class="second-show">
-            <div><%= article.prefecture.name %></div>
-            <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
-        </div>
-        <div class="content-show">
-          <%= safe_join(article.content.split("\n"), tag(:br)) %>
-        </div>
+    <div class="main-show3">
+      <div class="second-show">
+          <div><%= article.prefecture.name %></div>
+          <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
       </div>
-    <%#/div%>
+      <div class="content-show">
+        <%= safe_join(article.content.split("\n"), tag(:br)) %>
+      </div>
+    </div>
   </div>
   <div class="bottom-show2">
     <div class="like", id="article_<%= article.id %>">
