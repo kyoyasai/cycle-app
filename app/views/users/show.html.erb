@@ -11,6 +11,11 @@
       <div class="mypage-name">
         <b><%= @user.nickname %></b>さんの投稿一覧
       </div>
+      <div class="post-sort">
+        <p class="sort-label">並び替え</p>
+        <%= link_to "投稿日時順", user_path, class: "sort-list" %>
+        <%= link_to "いいねが多い順", user_path(key: 1), class: "sort-list" %>
+      </div>
       <% @articles.each do |article| %>
         <%= render partial: "/articles/article", locals: {article: article}%>
       <% end %>
