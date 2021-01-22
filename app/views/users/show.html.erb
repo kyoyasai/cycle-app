@@ -8,8 +8,11 @@
       <% end %>
     </div>
     <div class="col-lg-9 offset-lg-0 offset-md-2 offset-sm-1 offset-0 mypage-post">
-      <div class="mypage-name">
-        <b><%= @user.nickname %></b>さんの投稿一覧
+      <div class="mypage-top">
+        <div class="mypage-name"><b><%= @user.nickname %></b>さんの投稿一覧</div>
+        <% if user_signed_in? && current_user.id == @user.id && current_user.nickname != "ゲスト" %>
+          <%= link_to '登録情報の変更', edit_user_registration_path(current_user), class: "mypage-edit" %>
+        <% end %>
       </div>
       <div class="post-sort">
         <p class="sort-label">並び替え</p>
