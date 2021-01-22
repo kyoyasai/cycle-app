@@ -1,4 +1,4 @@
-lock "~> 3.14.1"
+lock "3.14.1"
 
 set :application, "cycle-app"
 set :repo_url, "git@github.com:kyoyasai/cycle-app.git"
