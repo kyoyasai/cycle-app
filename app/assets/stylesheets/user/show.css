@@ -7,10 +7,32 @@
   padding: 16px 16px 8px;
 }
 
+.mypage-top {
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@media(min-width: 992px) {
+  .mypage-top {
+    width: 700px;
+  }
+}
+
+@media(max-width: 992px) {
+  .mypage-top {
+    width: 450px;
+  }
+}
+
 .mypage-name {
   font-size: 20px;
   color: black;
-  padding-bottom: 8px;
+}
+
+.mypage-edit {
+  text-decoration: none;
 }
 
 .mypage-user-name {

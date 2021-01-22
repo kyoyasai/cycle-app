@@ -6,4 +6,10 @@ class RegistrationsController < Devise::RegistrationsController
       redirect_to root_path, alert: 'ゲストユーザーは削除できません'
     end
   end
+
+  protected
+
+  def update_resource(resource, params)
+    resource.update_without_password(params)
+  end
 end

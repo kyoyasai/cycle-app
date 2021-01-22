@@ -1,4 +1,15 @@
 ja:
+  activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+     article:
+       title: タイトル
+       prefecture_id: 都道府県
+       distance: 距離
+       content: できごと
+     comment:
+       message: コメント
   views:
     pagination:
       first: "&laquo; 最初"
@@ -6,3 +17,7 @@ ja:
       previous: "&lsaquo; 前"
       next: "次 &rsaquo;"
       truncate: "..."
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+      short: "%Y/%m/%d"

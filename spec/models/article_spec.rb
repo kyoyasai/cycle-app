@@ -12,25 +12,25 @@ describe Article do
       end
     end
     context '新規投稿がうまくいかない時' do
-      it 'titleが空だと登録できない' do
+      it 'タイトルが空だと登録できない' do
         @article.title = ""
         @article.valid?
-        expect(@article.errors.full_messages).to include("Titleを入力してください")
+        expect(@article.errors.full_messages).to include("タイトルを入力してください")
       end
-      it '県名を選択しないと登録できない' do
+      it '都道府県を選択しないと登録できない' do
         @article.prefecture_id = 1
         @article.valid?
-        expect(@article.errors.full_messages).to include ("Prefectureを選択してください")
+        expect(@article.errors.full_messages).to include ("都道府県を選択してください")
       end
-      it 'distanceが空だと登録できない' do
+      it '距離が空だと登録できない' do
         @article.distance = ""
         @article.valid?
-        expect(@article.errors.full_messages).to include ("Distanceを入力してください")
+        expect(@article.errors.full_messages).to include ("距離を入力してください")
       end
-      it 'contentが空だと登録できない' do
+      it 'できごとが空だと登録できない' do
         @article.content = ""
         @article.valid?
-        expect(@article.errors.full_messages).to include ("Contentを入力してください")
+        expect(@article.errors.full_messages).to include ("できごとを入力してください")
       end
     end
   end

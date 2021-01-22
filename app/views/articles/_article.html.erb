@@ -1,12 +1,14 @@
-<div class="d-none d-lg-block post-all">
+<div class="post-all">
   <div class="post-text">
+
     <div class="first-show">
-      <div class="post-title">
+      <div class="first-show-left">
         <% unless current_page?(article_path(article.id)) %>
           <b><%= link_to article.title, article_path(article.id), class: "post-title-btn" %></b>
         <% else %>
           <b><%= article.title %></b>
         <% end %>
+        <div class="post-time"><%= l article.created_at, format: :short %></div>
       </div>
       <% if user_signed_in? && current_user.id == article.user_id %>
       <div class="bar-btn", id="bar">
@@ -22,68 +24,32 @@
       </div>
       <% end %>
     </div>
-    <div class="d-none d-lg-block">
+
+    <div class="d-lg-block d-none">
       <div class="post-show">
-        <% if article.image.attached? %>
+      <% if article.image.attached? %>
         <div class="main-show1">
-        <% else %>
+      <% else %>
         <div class="main-show2">
-        <% end %>
-          <div class="second-show">
-            <div><%= article.prefecture.name %></div>
-            <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
-          </div>
-          <div class="content-show">
-            <%= safe_join(article.content.split("\n"), tag(:br)) %>
-          </div>
-        </div>
-        <% if article.image.attached? %>
-        <div class="post-image d-none d-lg-block">
-          <b>画像タイトル</b>
-          <div>
-            <%= link_to image_tag(article.image.variant(resize: '200x200')), article_path(article.id) %>
-          </div>
-        </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="bottom-show">
-    <div class="like", id="article_<%= article.id %>">
-      <%= render partial: "likes/like", locals: {article: article} %>
-    </div>
-    <div class = "bottom-right">
-      <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
-    </div>
-  </div>
-</div>
-
-
-<%#レスポンシブ対応%>
-<div class="d-lg-none post-all2">
-  <div class="post-text">
-    <div class="first-show">
-      <div class="post-title">
-        <% unless current_page?(article_path(article.id)) %>
-          <b><%= link_to article.title, article_path(article.id), class: "post-title-btn" %></b>
-        <% else %>
-          <b><%= article.title %></b>
-        <% end %>
-      </div>
-      <% if user_signed_in? && current_user.id == article.user_id %>
-      <div class="bar-btn", id="bar">
-        ...
-        <ul class="bar-contents", id="pull-down" role="menu">
-          <li class="bar-list" role="presentation">
-            <%= link_to '編集', edit_article_path(article.id), class: "list-btn" %>
-          </li>
-          <li class="bar-list" role="presentation">
-            <%= link_to '削除', article_path(article.id), method: :delete, class: "list-btn" %>
-          </li>
-        </ul>
-      </div>
       <% end %>
+        <div class="second-show">
+          <div><%= article.prefecture.name %></div>
+          <div class="distance-show"><%= article.distance %><p class="distance-unit-show">km</p></div>
+        </div>
+        <div class="content-show">
+          <%= safe_join(article.content.split("\n"), tag(:br)) %>
+        </div>
+        </div>
+      <% if article.image.attached? %>
+        <div class="post-image d-none d-lg-block">
+          <div><b><%= article.image_title %></b></div>
+          <div><%= link_to image_tag(article.image.variant(resize: '200x200')), article_path(article.id) %></div>
+        </div>
+      <% end %>
+      </div>
     </div>
+  
+
     <div class="d-lg-none">
       <div class="main-show3">
         <div class="second-show">
@@ -95,14 +61,24 @@
         </div>
       </div>
     </div>
+  
   </div>
-  <div class="bottom-show2">
-    <div class="like", id="article_<%= article.id %>">
+
+  <div class="bottom-show">
+    <div class="bottom-left", id="article_<%= article.id %>">
       <%= render partial: "likes/like", locals: {article: article} %>
+      <div class="d-lg-none">
+        <% if article.image.attached? %>
+          <%= link_to '詳細', article_path(article), class:"show-link" %>
+          <%= link_to '(画像あり)', article_path(article), class:"show-link-image" %>
+        <% else %>
+          <%= link_to '詳細', article_path(article), class:"show-link" %>
+        <% end %>
+      </div>
     </div>
     <div class = "bottom-right">
       <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
     </div>
   </div>
+
 </div>
-<%#/レスポンシブ対応%>

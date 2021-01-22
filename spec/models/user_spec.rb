@@ -12,52 +12,52 @@ describe User do
       end
     end
     context '新規登録がうまくいかない時' do
-      it 'nicknameが空だと登録できない' do
+      it 'ニックネームが空だと登録できない' do
         @user.nickname = ""
         @user.valid?
-        expect(@user.errors.full_messages).to include("Nicknameを入力してください")
+        expect(@user.errors.full_messages).to include("ニックネームを入力してください")
       end
-      it 'emailが空だと登録できない' do
+      it 'Eメールが空だと登録できない' do
         @user.email = ""
         @user.valid?
-        expect(@user.errors.full_messages).to include("Emailを入力してください")
+        expect(@user.errors.full_messages).to include("Eメールを入力してください")
       end
-      it 'emailが重複していると登録でいない' do
+      it 'Eメールが重複していると登録でいない' do
         @user.save
         another_user = FactoryBot.build(:user)
         another_user.email = @user.email
         another_user.valid?
-        expect(another_user.errors.full_messages).to include("Emailはすでに存在します")
+        expect(another_user.errors.full_messages).to include("Eメールはすでに存在します")
       end
-      it 'passwordが空だと登録できない' do
+      it 'パスワードが空だと登録できない' do
         @user.password = ""
         @user.valid?
-        expect(@user.errors.full_messages).to include("Passwordを入力してください")
+        expect(@user.errors.full_messages).to include("パスワードを入力してください")
       end
-      it 'passwordが7文字以下だと登録できない' do
+      it 'パスワードが7文字以下だと登録できない' do
         @user.password = "abcd123"
         @user.valid?
-        expect(@user.errors.full_messages).to include("Passwordには英字と数字の両方を含めて8文字以上で設定して下さい")
+        expect(@user.errors.full_messages).to include("パスワードには英字と数字の両方を含めて8文字以上で設定して下さい")
       end
-      it 'passwordに英字を含めないと登録できない' do
+      it 'パスワードに英字を含めないと登録できない' do
         @user.password = "1234567"
         @user.valid?
-        expect(@user.errors.full_messages).to include("Passwordには英字と数字の両方を含めて8文字以上で設定して下さい")
+        expect(@user.errors.full_messages).to include("パスワードには英字と数字の両方を含めて8文字以上で設定して下さい")
       end
-      it 'passwordに数字を含めないと登録できない' do
+      it 'パスワードに数字を含めないと登録できない' do
         @user.password = "abcdefg"
         @user.valid?
-        expect(@user.errors.full_messages).to include("Passwordには英字と数字の両方を含めて8文字以上で設定して下さい")
+        expect(@user.errors.full_messages).to include("パスワードには英字と数字の両方を含めて8文字以上で設定して下さい")
       end
-      it 'password_confirmationが空だと登録できない' do
+      it 'パスワード（確認用）が空だと登録できない' do
         @user.password_confirmation = ""
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password confirmationとPasswordの入力が一致しません")
+        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
       end
-      it 'password_confirmationがpasswordに一致しなければ登録できない' do
+      it 'パスワード（確認用）がパスワードに一致しなければ登録できない' do
         @user.password_confirmation = "abcd1234"
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password confirmationとPasswordの入力が一致しません")
+        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
       end
     end
   end

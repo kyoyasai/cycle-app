@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_01_13_073317) do
     t.integer "prefecture_id", null: false
     t.float "distance", null: false
     t.text "content", null: false
+    t.string "image_title"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

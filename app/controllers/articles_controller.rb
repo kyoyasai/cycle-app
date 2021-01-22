@@ -50,14 +50,13 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    @articles = Article.search(params[:keyword])
     @results = @q.result.includes(:user).page(params[:page]).per(10).order("created_at desc")
   end
 
 
   private
   def article_params
-    params.require(:article).permit(:title, :prefecture_id, :distance, :content, :image).merge(user_id: current_user.id)
+    params.require(:article).permit(:title, :prefecture_id, :distance, :content, :image, :image_title).merge(user_id: current_user.id)
   end
 
   def set_article

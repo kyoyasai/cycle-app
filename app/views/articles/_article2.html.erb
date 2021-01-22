@@ -1,12 +1,14 @@
-<div class="d-none d-lg-block post-all">
+<div class="post-all">
   <div class="post-text">
+
     <div class="first-show">
-      <div class="post-title">
+      <div class="first-show-left">
         <% unless current_page?(article_path(article.id)) %>
           <b><%= link_to article.title, article_path(article.id), class: "post-title-btn" %></b>
         <% else %>
           <b><%= article.title %></b>
         <% end %>
+        <div class="post-time"><%= l article.created_at, format: :short %></div>
       </div>
       <% if user_signed_in? && current_user.id == article.user_id %>
       <div class="bar-btn", id="bar">
@@ -22,6 +24,8 @@
       </div>
       <% end %>
     </div>
+
+    <div class="d-lg-block d-none">
       <div class="main-show2">
         <div class="second-show">
             <div><%= article.prefecture.name %></div>
@@ -31,52 +35,8 @@
           <%= safe_join(article.content.split("\n"), tag(:br)) %>
         </div>
       </div>
-  </div>
-  <div class="bottom-show">
-    <div class="like", id="article_<%= article.id %>">
-      <%= render partial: "likes/like", locals: {article: article} %>
     </div>
-    <div class = "bottom-right">
-      <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
-    </div>
-  </div>
-</div>
 
-<% if article.image.attached? %>
-  <div class="d-none d-lg-block post-image2">
-    <b>画像タイトル</b>
-    <div>
-      <%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %>
-    </div>
-  </div>
-<% end %>
-
-
-<%#レスポンシブ対応%>
-<div class="d-lg-none post-all2">
-  <div class="post-text">
-    <div class="first-show">
-      <div class="post-title">
-        <% unless current_page?(article_path(article.id)) %>
-          <b><%= link_to article.title, article_path(article.id), class: "post-title-btn" %></b>
-        <% else %>
-          <b><%= article.title %></b>
-        <% end %>
-      </div>
-      <% if user_signed_in? && current_user.id == article.user_id %>
-      <div class="bar-btn", id="bar">
-        ...
-        <ul class="bar-contents", id="pull-down" role="menu">
-          <li class="bar-list" role="presentation">
-            <%= link_to '編集', edit_article_path(article.id), class: "list-btn" %>
-          </li>
-          <li class="bar-list" role="presentation">
-            <%= link_to '削除', article_path(article.id), method: :delete, class: "list-btn" %>
-          </li>
-        </ul>
-      </div>
-      <% end %>
-    </div>
     <div class="d-lg-none">
       <div class="main-show3">
         <div class="second-show">
@@ -88,24 +48,23 @@
         </div>
       </div>
     </div>
+
   </div>
-  <div class="bottom-show2">
-    <div class="like", id="article_<%= article.id %>">
+
+  <div class="bottom-show">
+    <div class="bottom-left", id="article_<%= article.id %>">
       <%= render partial: "likes/like", locals: {article: article} %>
     </div>
     <div class = "bottom-right">
       <%= link_to article.user.nickname, user_path(article.user_id), class: "post-user"%>
     </div>
   </div>
+
 </div>
 
 <% if article.image.attached? %>
-  <div class="d-lg-none post-image3">
-    <b>画像タイトル</b>
-    <div>
-      <%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %>
-    </div>
+  <div class="post-image2">
+    <div><b><%= article.image_title %></b></div>
+    <div><%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %></div>
   </div>
 <% end %>
-
-<%#/レスポンシブ対応%>

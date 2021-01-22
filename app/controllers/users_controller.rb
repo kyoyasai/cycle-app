@@ -4,6 +4,11 @@ class UsersController < ApplicationController
   before_action :search_product
 
   def show
+    if params[:key] == "1"
+      @articles = Kaminari.paginate_array(@user.articles.like_sort_result).page(params[:page]).per(10)
+    else
+      @articles = @user.articles.includes(:user).page(params[:page]).per(10).order("created_at desc")
+    end
   end
 
   def search
