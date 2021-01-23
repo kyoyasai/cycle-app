@@ -13,6 +13,7 @@
 
 - has_many :articles
 - has_many :comments
+- has_many :likes
 
 
 
@@ -24,14 +25,14 @@
 | prefecture_id | integer    | null: false                    |
 | distance      | float      | null: false                    |
 | content       | text       | null: false                    |
-| evaluation    | float      |                                |
+| image_title   | string     |                                |
 | user          | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - has_many   :comments
-- has_many   :tweet-tags
+- has_many   :likes
 
 
 ## comments
@@ -49,27 +50,15 @@
 
 
 
-## tags
+## likes
 
-| Column   | Type   | Options     |
-|----------|--------|-------------|
-| tag_name | string | null: false |
+| Column  | Type   | Options     |
+|---------|--------|-------------|
+| user    | string | null: false |
+| article | string | null: false |
 
 
 ### Association
 
-- has_many :article-tags
-
-
-
-## article-tags
-
-| Column  | Type       | Options                        |
-|---------|------------|--------------------------------|
-| article | references | null: false, foreign_key: true |
-| tag     | references | null: false, foreign_key: true |
-
-### Association
-
+- belongs_to :user
 - belongs_to :article
-- belongs_to :tag
