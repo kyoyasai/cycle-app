@@ -1,64 +1,45 @@
-# テーブル設計
+## アプリケーション名
+CYCLE NOTE
 
-## users
+## アプリケーション概要
+どんなアプリか：サイクルスポットを共有できるアプリ
+背景：趣味のサイクリングに関して、インターネット上にサイクルスポット情報が少なく、友達同士の口コミで目的地を決める経験がしばしばあったことから着想を得て、誰でも気軽にサイクリングの体験を投稿できる本アプリを考案
+どんなターゲット層に：サイクリングが趣味の人
+どんなニーズ&課題に：他の人のサイクリングの経験を知りたい・サイクルスポットが知りたい・おおよその走行距離が知りたい
 
-| Column             | Type    | Options                   |
-|--------------------|---------|---------------------------|
-| nickname           | string  | null: false               |
-| email              | string  | null: false, unique: true |
-| encrypted_password | string  | null: false               |
+## 使用言語
+・HTML&CSS
+・Ruby
+・Ruby on rails
+・JavaScript
+・Bootstrap
 
+## URL
+http://18.177.112.110/
 
-### Association
+## (テスト用アカウント)
 
-- has_many :articles
-- has_many :comments
-- has_many :likes
+## 利用方法
 
+## 目指した課題解決
 
+## 要件定義
 
-## articles
+## 実装機能
+### ユーザー管理機能（新規登録・ログイン）
+### 記事投稿機能
+### 記事一覧表示機能
+### マイページ記事一覧表示機能
+### ユーザー登録情報編集機能
+### 記事詳細表示機能
+### 記事編集・削除機能
+### 画像投稿機能
+### 記事検索機能
+### いいね機能
+### ゲストログイン機能
+### ページネーション機能
+### レスポンシブ対応
 
-| Column        | Type       | Options                        |
-|---------------|------------|--------------------------------|
-| title         | string     | null: false                    |
-| prefecture_id | integer    | null: false                    |
-| distance      | float      | null: false                    |
-| content       | text       | null: false                    |
-| image_title   | string     |                                |
-| user          | references | null: false, foreign_key: true |
+## DB設計
 
-### Association
-
-- belongs_to :user
-- has_many   :comments
-- has_many   :likes
-
-
-## comments
-
-| Column  | Type       | Options                        |
-|---------|------------|--------------------------------|
-| message | text       | null: false                    |
-| user    | references | null: false, foreign_key: true |
-| article | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :article
-
-
-
-## likes
-
-| Column  | Type   | Options     |
-|---------|--------|-------------|
-| user    | string | null: false |
-| article | string | null: false |
-
-
-### Association
-
-- belongs_to :user
-- belongs_to :article
+## ローカルでの動作方法
