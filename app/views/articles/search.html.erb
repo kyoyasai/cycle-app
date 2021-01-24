@@ -9,6 +9,7 @@
   </div>
   <div class="col-lg-9 offset-lg-0 col-md-10 offset-md-2 col-sm-11 offset-sm-1 offset-0 post-list">
     <% if @results.exists? %>
+      <div class="offset-lg-0 offset-sm-3 offset-1 search-result"><b>投稿検索結果</b></div>
       <% @results.each do |result| %>
         <%= render partial: "article", locals: {article: result}%>
       <% end %>
