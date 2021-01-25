@@ -48,7 +48,7 @@ http://18.177.112.110/
 
 ## DB設計
 ### ER図
-<img src="./images/ER.png" width="400px" height="400px" title="ER図">
+<img src="./images/ER.png" height="400px" title="ER図">
 
 ## 工夫したポイント
 ・走行距離や都道府県などサイクリングの用途に応じた検索フォームを作成<br>
