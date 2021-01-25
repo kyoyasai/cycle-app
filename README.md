@@ -54,7 +54,7 @@ http://18.177.112.110/
 
 ## 工夫したポイント
 ・記事の表示方法に関して、走行距離や都道府県などサイクリングの用途に応じた検索フォームを作成したり（上図参照）、投稿日時順やいいね順での並び替え機能を作成（下図）<br>
-<img src="./images/並び替え_投稿日時順.png" height="340px" title="投稿並び替え">  <img src="./images/並び替え_いいね順.png" height="340px" title="投稿並び替え">
+<img src="./images/並び替え_投稿日時順.png" height="340px" title="投稿並び替え">  <img src="./images/並び替え_いいね順.png" height="340px" title="投稿並び替え"> <br>
 ・異なるデバイスの画面幅に対応するため、レスポンシブデザインを実装（左図：PC画面、右図：スマホ画面）<br>
 <img src="./images/レスポンシブ_PC画面.png" height="340px" title="PC画面">  <img src="./images/レスポンシブ_スマホ画面.png" height="340px" title="スマホ画面">
 
