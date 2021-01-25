@@ -6,19 +6,21 @@ CYCLE NOTE
 アプリ機能は以下の通り<br>
 #### 1. 記事の投稿
 タイトル、都道府県、走行距離、できごと、画像タイトル(任意)、画像(任意)を入力することで、記事の投稿が出来る<br>
-<img src="./images/記事投稿画面.jpeg" width="400px" height="400px" title="記事の投稿">
+<img src="./images/記事投稿画面1.png" width="400px" height="400px" title="記事の投稿1">
+<img src="./images/記事投稿画面2.png" width="400px" height="400px" title="記事の投稿2">
 #### 2. 記事の表示
 投稿した記事は、トップページに表示される<br>
-[]( ![投稿一覧](./images/投稿一覧画面.gif))
+![投稿一覧](./images/投稿一覧画面.png)
 #### 3. いいね機能
 投稿された記事に対して、いいねを押すことが出来る<br>
-[]( ![いいね機能](./images/いいね機能.gif))
+![いいね機能](./images/いいね機能.png)
 #### 4. 記事の検索
 投稿された記事を、キーワード・走行距離・都道府県の項目で検索出来る<br>
 ![記事の検索](./images/投稿検索画面.png)
 #### 5. 記事へのコメント
 記事詳細ページから記事へのコメントができる<br>
-
+<img src="./images/コメント機能1.png" width="400px" height="400px" title="コメント機能1">
+<img src="./images/コメント機能2.png" width="400px" height="400px" title="コメント機能2">
 
 ## 開発環境
 ・HTML&CSS
