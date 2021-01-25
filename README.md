@@ -62,8 +62,8 @@ http://18.177.112.110/
 
 ## 工夫したポイント
 ・走行距離や都道府県などサイクリングの用途に応じた検索フォームを作成<br>
-・異なるデバイスの画面幅に対応するため、レスポンシブデザインを実装<br>
-<img src="./images/レスポンシブ_PC画面.png" width="400px" height="400px" title="PC画面">  <img src="./images/レスポンシブ_スマホ画面.png" width="400px" height="400px" title="スマホ画面">
+・異なるデバイスの画面幅に対応するため、レスポンシブデザインを実装（左図：PC画面、右図：スマホ画面）<br>
+<img src="./images/レスポンシブ_PC画面.png" height="350px" title="PC画面">  <img src="./images/レスポンシブ_スマホ画面.png" height="350px" title="スマホ画面">
 
 ## 課題や今後実装したい機能
 ・ユーザーフォロー機能<br>
