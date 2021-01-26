@@ -75,17 +75,17 @@ http://18.177.112.110/
 | user_id       | references | foreign_key: true |
 
 #### comments
-| Column  | Type       | Options           |
-|---------|------------|-------------------|
-| message | text       | null: false       |
-| user    | references | foreign_key: true |
-| article | references | foreign_key: true |
+| Column     | Type       | Options           |
+|------------|------------|-------------------|
+| message    | text       | null: false       |
+| user       | references | foreign_key: true |
+| article_id | references | foreign_key: true |
 
 #### likes
-| Column  | Type       | Options           |
-|---------|------------|-------------------|
-| user    | references | foreign_key: true |
-| article | references | foreign_key: true |
+| Column     | Type       | Options           |
+|------------|------------|-------------------|
+| user_id    | references | foreign_key: true |
+| article_id | references | foreign_key: true |
 
 
 ## 工夫したポイント
