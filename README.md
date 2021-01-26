@@ -54,7 +54,7 @@ http://18.177.112.110/
 #### ゲストログイン機能 / ページネーション機能 / レスポンシブデザイン
 
 ## DB設計
-<img src="./images/ER.png" width="500px" title="ER図" align="left"><br><br><br><br><br><br>&emsp;&ensp;・usersテーブル：ユーザー情報を管理<br>&emsp;&ensp;・articlesテーブル：投稿記事の情報を管理<br>&emsp;&ensp;・commentsテーブル：コメント情報を管理<br>&emsp;&ensp;・likesテーブル：いいね情報を管理<br clear="all">
+<img src="./images/ER.png" width="500px" title="ER図" align="left"><br><br><br><br><br><br>&ensp;&ensp;・usersテーブル：ユーザー情報を管理<br>&ensp;&ensp;・articlesテーブル：投稿記事の情報を管理<br>&ensp;&ensp;・commentsテーブル：コメント情報を管理<br>&ensp;&ensp;・likesテーブル：いいね情報を管理<br clear="all">
 
 
 ## 工夫したポイント
@@ -63,7 +63,7 @@ http://18.177.112.110/
 　2点目は、投稿日時順やいいね順での並び替え機能を作成し、自分が見たい投稿が上位に来るよう工夫（下図）<br>
 <img src="./images/並び替え_投稿日時順.png" width="900px" title="投稿並び替え">  <img src="./images/並び替え_いいね順.png" width="900px" title="投稿並び替え"> <br><br>
 * レスポンシブデザインを実装し、異なるデバイスの画面幅に対応（1枚目：PC画面、2枚目：スマホ画面）<br>
-<img src="./images/レスポンシブ_PC画面.png" height="340px" title="PC画面"><img src="./images/レスポンシブ_スマホ画面.png" height="340px" title="スマホ画面">
+<img src="./images/レスポンシブ_PC画面.png" height="400px" title="PC画面"><img src="./images/レスポンシブ_スマホ画面.png" height="400px" title="スマホ画面">
 
 ## 今後実装したい機能
 ・キーワードのタグ付け機能<br>
