@@ -13,10 +13,12 @@ CYCLE NOTE
 <img src="./images/投稿一覧画面.png" width="900px" title="投稿一覧">
 #### 3. いいね機能
 投稿された記事に対して、いいねを押すことが出来る<br>
-![いいね機能](./images/いいね機能.png)
+<img src="./images/いいね機能.png" width="900px" title="いいね機能">
+[](![いいね機能](./images/いいね機能.png))
 #### 4. 記事の検索
 投稿された記事を、キーワード・走行距離・都道府県の項目で検索出来る<br>
-![記事の検索](./images/投稿検索画面.png)
+<img src="./images/投稿検索画面.png" width="900px" title="記事の検索">
+[](![記事の検索](./images/投稿検索画面.png))
 #### 5. 記事へのコメント
 記事詳細ページから記事へのコメントができる<br>
 <img src="./images/コメント機能1.png" width="400px" height="400px" title="コメント機能">  <img src="./images/コメント機能2.png" width="400px" height="400px" title="コメント機能">
