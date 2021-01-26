@@ -1,5 +1,5 @@
 ## アプリケーション名
-CYCLE NOTE
+#### CYCLE NOTE
 
 ## 開発環境
 HTML&CSS / Ruby / Ruby on Rails / JavaScript / Bootstrap /<br>
