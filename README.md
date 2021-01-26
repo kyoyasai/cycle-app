@@ -1,6 +1,13 @@
 ## アプリケーション名
 CYCLE NOTE
 
+## 開発環境
+HTML&CSS / Ruby / Ruby on Rails / JavaScript / Bootstrap /<br>
+MySQL / EC2 / S3 / Visual Studio Code
+
+## URL
+http://18.177.112.110/
+
 ## アプリケーション概要
 サイクリングの経験を共有できるアプリ<br>
 アプリの主要機能は以下の通り<br>
@@ -23,19 +30,14 @@ CYCLE NOTE
 記事詳細ページから記事へのコメントができる<br>
 <img src="./images/コメント機能1.png" height="420px" title="コメント機能">  <img src="./images/コメント機能2.png" height="420px" title="コメント機能">
 
-## 開発環境
-HTML&CSS / Ruby / Ruby on Rails / JavaScript / Bootstrap /<br>
-MySQL / EC2 / S3 / Visual Studio Code
-
-## URL
-http://18.177.112.110/
-
 ## 制作背景
 自分の趣味であるサイクリングに関して、インターネット上にサイクルスポットなどの口コミサイトがなかった<br>
 一方、友人の話を聞いて、自分も同じ場所にサイクリングに行きたいと思う経験がしばしばあった<br>
 以上の経験から、誰でも気軽にサイクリングの経験を共有しあえるサービスはないかと考え、本アプリを考案<br>
+
 #### 目的のターゲット層
 サイクリングが趣味の人
+
 #### どんなニーズ&課題に
 ・他の人のサイクリングの経験を知りたい<br>
 ・サイクルスポットの情報が知りたい<br>
