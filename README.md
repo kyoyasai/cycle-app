@@ -31,6 +31,7 @@ http://18.177.112.110/
 <img src="./images/投稿検索画面.png" width="900px" title="記事の検索">
 [](![記事の検索](./images/投稿検索画面.png))
 #### 5. 記事へのコメント
+記事のタイトルまたは画像をクリックして、記事詳細ページに移動<br>
 記事詳細ページから記事へのコメントができる<br>
 <img src="./images/コメント機能1.png" height="420px" title="コメント機能">  <img src="./images/コメント機能2.png" height="420px" title="コメント機能">
 
@@ -53,11 +54,13 @@ http://18.177.112.110/
 #### ゲストログイン機能 / ページネーション機能 / レスポンシブデザイン
 
 ## DB設計
-<img src="./images/ER.png" width="500px" title="ER図" align="left"><br><br><br><br><br><br>&emsp;・usersテーブル：ユーザー情報を管理<br>&emsp;・articlesテーブル：投稿記事の情報を管理<br>&emsp;・commentsテーブル：コメント情報を管理<br>&emsp;・likesテーブル：いいね情報を管理<br clear="all">
+<img src="./images/ER.png" width="500px" title="ER図" align="left"><br><br><br><br><br><br>&emsp;&emsp;・usersテーブル：ユーザー情報を管理<br>&emsp;&emsp;・articlesテーブル：投稿記事の情報を管理<br>&emsp;&emsp;・commentsテーブル：コメント情報を管理<br>&emsp;&emsp;・likesテーブル：いいね情報を管理<br clear="all">
 
 
 ## 工夫したポイント
-* 記事の表示方法に関して、走行距離や都道府県などサイクリングの用途に応じた検索フォームを作成したり（上図参照）、投稿日時順やいいね順での並び替え機能を作成（下図）<br>
+* 記事の表示方法に関して、以下の2点が工夫ポイント<br>
+　1点目は、走行距離や都道府県などの検索フォームを作成することで、サイクリングの用途に応じた投稿検索が行えるよう工夫<br>（アプリケーションの概要4の図を参照）<br>
+　2点目は、投稿日時順やいいね順での並び替え機能を作成し、自分が見たい投稿が上位に来るよう工夫（下図）<br>
 <img src="./images/並び替え_投稿日時順.png" width="900px" title="投稿並び替え">  <img src="./images/並び替え_いいね順.png" width="900px" title="投稿並び替え"> <br><br>
 * 異なるデバイスの画面幅に対応するため、レスポンシブデザインを実装（左図：PC画面、右図：スマホ画面）<br>
 <img src="./images/レスポンシブ_PC画面.png" height="340px" title="PC画面"> <img src="./images/レスポンシブ_スマホ画面.png" height="340px" title="スマホ画面">
