@@ -33,7 +33,7 @@ http://18.177.112.110/
 #### 5. 記事へのコメント
 記事のタイトルまたは画像をクリックして、記事詳細ページに移動<br>
 記事詳細ページから記事へのコメントができる<br>
-<img src="./images/コメント機能1.png" height="420px" title="コメント機能">  <img src="./images/コメント機能2.png" height="420px" title="コメント機能">
+<img src="./images/コメント機能1.png" height="410px" title="コメント機能">  <img src="./images/コメント機能2.png" height="410px" title="コメント機能">
 
 ## 制作背景
 自分の趣味であるサイクリングに関して、インターネット上にサイクルスポットなどの口コミサイトがなかった<br>
@@ -63,7 +63,7 @@ http://18.177.112.110/
 　2点目は、投稿日時順やいいね順での並び替え機能を作成し、自分が見たい投稿が上位に来るよう工夫（下図）<br>
 <img src="./images/並び替え_投稿日時順.png" width="900px" title="投稿並び替え">  <img src="./images/並び替え_いいね順.png" width="900px" title="投稿並び替え"> <br><br>
 * レスポンシブデザインを実装し、異なるデバイスの画面幅に対応（左図：PC画面、右図：スマホ画面）<br>
-<img src="./images/レスポンシブ_PC画面.png" height="340px" title="PC画面"> <img src="./images/レスポンシブ_スマホ画面.png" height="340px" title="スマホ画面">
+<img src="./images/レスポンシブ_PC画面.png" height="340px" title="PC画面"><img src="./images/レスポンシブ_スマホ画面.png" height="340px" title="スマホ画面">
 
 ## 今後実装したい機能
 ・キーワードのタグ付け機能<br>
