@@ -53,7 +53,7 @@ http://18.177.112.110/
 #### ゲストログイン機能 / ページネーション機能 / レスポンシブデザイン
 
 ## DB設計
-<img src="./images/ER.png" width="500px" title="ER図" align="left"><br><br><br><br><br><br><br>        ・usersテーブル：ユーザー情報を管理<br>        ・articlesテーブル：投稿記事の情報を管理<br>        ・commentsテーブル：コメント情報を管理<br>        ・likesテーブル：いいね情報を管理<br clear="all">
+<img src="./images/ER.png" width="500px" title="ER図" align="left"><br><br><br><br><br><br>        ・usersテーブル：ユーザー情報を管理<br>        ・articlesテーブル：投稿記事の情報を管理<br>        ・commentsテーブル：コメント情報を管理<br>        ・likesテーブル：いいね情報を管理<br clear="all">
 
 
 ## 工夫したポイント
