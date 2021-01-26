@@ -70,3 +70,16 @@ http://18.177.112.110/
 * ユーザーフォロー機能<br>
 * SNSアカウントとの連携<br>
 * いいねされた時の通知機能<br>
+
+## ローカルでの動作方法
+ターミナル上で、作業用のディレクトリに移動し、以下のコマンドを実行
+```ターミナル
+git clone https://github.com/takuya-karatsu/cycle-app.git
+cd cycle-app
+bundle install
+yarn install 
+rails db:create
+rails db:migrate
+rails s
+```
+http://localhost:3000/ にアクセス
