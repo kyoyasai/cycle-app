@@ -56,6 +56,38 @@ http://18.177.112.110/
 ### ER図
 <img src="./images/ER.png" width="450px" title="ER図">
 
+### テーブル設計
+#### users
+| Column             | Type    | Options                   |
+|--------------------|---------|---------------------------|
+| nickname           | string  | null: false               |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
+
+#### articles
+| Column        | Type       | Options           |
+|---------------|------------|-------------------|
+| title         | string     | null: false       |
+| prefecture_id | integer    | null: false       |
+| distance      | float      | null: false       |
+| content       | text       | null: false       |
+| image_title   | string     |                   |
+| user_id       | references | foreign_key: true |
+
+#### comments
+| Column  | Type       | Options           |
+|---------|------------|-------------------|
+| message | text       | null: false       |
+| user    | references | foreign_key: true |
+| article | references | foreign_key: true |
+
+#### likes
+| Column  | Type       | Options           |
+|---------|------------|-------------------|
+| user    | references | foreign_key: true |
+| article | references | foreign_key: true |
+
+
 ## 工夫したポイント
 ・記事の表示方法に関して、走行距離や都道府県などサイクリングの用途に応じた検索フォームを作成したり（上図参照）、投稿日時順やいいね順での並び替え機能を作成（下図）<br>
 <img src="./images/並び替え_投稿日時順.png" width="900px" title="投稿並び替え">  <img src="./images/並び替え_いいね順.png" width="900px" title="投稿並び替え"> <br><br>
