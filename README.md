@@ -10,7 +10,7 @@ CYCLE NOTE
 <img src="./images/記事投稿画面1.png" width="400px" height="400px" title="記事の投稿">  <img src="./images/記事投稿画面2.png" width="400px" height="400px" title="記事の投稿">
 #### 2. 記事の表示
 投稿した記事は、トップページに表示される<br>
-<img src="./images/投稿一覧画面.png" width="800px" title="投稿一覧">
+<img src="./images/投稿一覧画面.png" width="900px" title="投稿一覧">
 #### 3. いいね機能
 投稿された記事に対して、いいねを押すことが出来る<br>
 ![いいね機能](./images/いいね機能.png)
