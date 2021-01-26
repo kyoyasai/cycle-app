@@ -7,7 +7,7 @@ CYCLE NOTE
 #### 1. 記事の投稿
 ヘッダーの新規投稿ボタンから記事投稿画面に移動<br>
 タイトル、都道府県、走行距離、できごと、画像タイトル(任意)、画像(任意)を入力することで、記事の投稿が出来る<br>
-<img src="./images/記事投稿画面1.png" width="450px" height="450px" title="記事の投稿">  <img src="./images/記事投稿画面2.png" width="450px" height="450px" title="記事の投稿">
+<img src="./images/記事投稿画面1.png" width="450px" title="記事の投稿">  <img src="./images/記事投稿画面2.png" width="450px" title="記事の投稿">
 #### 2. 記事の表示
 投稿した記事は、トップページに表示される<br>
 <img src="./images/投稿一覧画面.png" width="900px" title="投稿一覧">
@@ -21,7 +21,7 @@ CYCLE NOTE
 [](![記事の検索](./images/投稿検索画面.png))
 #### 5. 記事へのコメント
 記事詳細ページから記事へのコメントができる<br>
-<img src="./images/コメント機能1.png" width="450px" height="450px" title="コメント機能">  <img src="./images/コメント機能2.png" width="450px" height="450px" title="コメント機能">
+<img src="./images/コメント機能1.png" width="450px" title="コメント機能">  <img src="./images/コメント機能2.png" width="450px" title="コメント機能">
 
 ## 開発環境
 HTML&CSS / Ruby / Ruby on Rails / JavaScript / Bootstrap /<br>
@@ -52,7 +52,7 @@ http://18.177.112.110/
 
 ## DB設計
 ### ER図
-<img src="./images/ER.png" height="400px" title="ER図">
+<img src="./images/ER.png" width="450px" title="ER図">
 
 ## 工夫したポイント
 ・記事の表示方法に関して、走行距離や都道府県などサイクリングの用途に応じた検索フォームを作成したり（上図参照）、投稿日時順やいいね順での並び替え機能を作成（下図）<br>
