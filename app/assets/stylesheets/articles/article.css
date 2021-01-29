@@ -113,7 +113,6 @@
   justify-content: space-between;
   align-items: flex-end;
   color: slategray;
-  width: 700px;
 }
 
 .bottom-left {
@@ -189,6 +188,15 @@
 @media (max-width: 992px) {
   .post-all, .bottom-show {
     width: 470px;
+  }
+  .post-image2 {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 499px) {
+  .post-all, .bottom-show {
+    width: 90%;
   }
   .post-image2 {
     margin-bottom: 30px;
