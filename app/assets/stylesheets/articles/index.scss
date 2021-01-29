@@ -25,3 +25,15 @@
   text-decoration: none;
   margin-left: 5px;
 }
+
+@media (max-width: 575px) {
+  .search-list {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 499px) {
+  .search-list {
+    padding-left: 0;
+  }
+}
