@@ -14,18 +14,6 @@
   align-items: flex-end;
 }
 
-@media(min-width: 992px) {
-  .mypage-top {
-    width: 700px;
-  }
-}
-
-@media(max-width: 992px) {
-  .mypage-top {
-    width: 450px;
-  }
-}
-
 .mypage-name {
   font-size: 20px;
   color: black;
@@ -38,3 +26,35 @@
 .mypage-user-name {
   text-decoration: none;
 }
+
+
+/*レスポンシブ対応*/
+
+@media(min-width: 992px) {
+  .mypage-top {
+    width: 700px;
+  }
+}
+
+@media(max-width: 992px) {
+  .mypage-top {
+    width: 450px;
+  }
+}
+
+@media (max-width: 575px) {
+  .mypage-search {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 499px) {
+  .mypage-search {
+    padding-left: 0;
+  }
+  .mypage-top {
+    width: 95%;
+  }
+}
+
+/*/レスポンシブ対応*/
