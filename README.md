@@ -2,7 +2,7 @@
 #### CYCLE NOTE
 
 ## 開発環境
-HTML&CSS / Ruby / Ruby on Rails / JavaScript / Bootstrap /<br>
+HTML&CSS / JavaScript / Bootstrap / Ruby / Ruby on Rails / RSpec /<br>
 MySQL / EC2 / S3 / Visual Studio Code
 
 ## URL
