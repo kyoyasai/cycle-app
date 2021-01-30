@@ -158,7 +158,6 @@
 }
 
 .post-image2 {
-  width: 450px;
   text-align: center;
 }
 
@@ -181,6 +180,7 @@
     width: 700px;
   }
   .post-image2 {
+    width: 450px;
     margin: 0 auto 30px;
   }
 }
@@ -190,6 +190,7 @@
     width: 470px;
   }
   .post-image2 {
+    width: 450px;
     margin-bottom: 30px;
   }
 }
@@ -199,6 +200,7 @@
     width: 95%;
   }
   .post-image2 {
+    width: 400px;
     margin-bottom: 30px;
   }
 }
