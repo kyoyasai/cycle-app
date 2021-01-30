@@ -152,7 +152,6 @@
 /*article2*/
 
 .post-image-show {
-  width: 450px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -183,6 +182,9 @@
     width: 450px;
     margin: 0 auto 30px;
   }
+  .post-image-show {
+    width: 450px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -193,6 +195,9 @@
     width: 450px;
     margin-bottom: 30px;
   }
+  .post-image-show {
+    width: 450px;
+  }
 }
 
 @media (max-width: 499px) {
@@ -202,6 +207,9 @@
   .post-image2 {
     width: 350px;
     margin-bottom: 30px;
+  }
+  .post-image-show {
+    width: 400px;
   }
 }
 

@@ -65,7 +65,6 @@
 <% if article.image.attached? %>
   <div class="post-image2">
     <div><b><%= article.image_title %></b></div>
-    <div class="d-sm-block d-none"><%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %></div>
-    <div class="d-sm-none d-block"><%= image_tag article.image.variant(resize: '350x350'), class: "post-image-show" %></div>
+    <div><%= image_tag article.image.variant(resize: '450x450'), class: "post-image-show" %></div>
   </div>
 <% end %>
