@@ -1,16 +1,7 @@
-/*コメントフォーム（lg以上）*/
+/*コメントフォーム*/
 
-.comment-form1 {
-  width: 700px;
+.comment-form {
   margin-bottom: 16px;
-}
-.comment-main1 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-.comment-text1 {
-  width: 600px;
 }
 .comment-input {
   padding: 16px 16px 8px;
@@ -21,7 +12,7 @@
   height: 100px;
   font-size: 16px;
 }
-.comment-btn1 {
+.comment-btn {
   text-align: center;
   background: #ea352d;
   border: 1px solid #ea352d;
@@ -29,16 +20,12 @@
   width: 100px;
   height: 50px;
   font-size: 14px;
-  margin-left: 10px;
   border-radius: 10px;
 }
 
-/*コメントフォーム（lg以上）*/
+/*コメントフォーム*/
 
-/*コメント一覧（lg以上）*/
-.comment-lists1 {
-  width: 700px;
-}
+/*コメント一覧*/
 .comment-lists-label {
   border-bottom: 1px solid #ccc;
   margin-bottom: 5px;
@@ -56,36 +43,37 @@
   text-decoration: none;
 }
 
-/*/コメント一覧（lg以上）*/
+/*/コメント一覧*/
 
 /*--------------------------------------*/
 
-/*コメントフォーム（lg以下）*/
+/*レスポンシブデザイン*/
 
-.comment-form2 {
-  width: 450px;
-  margin-bottom: 16px;
-}
-.comment-text2 {
-  width: 450px;
-}
-.comment-btn2 {
-  text-align: center;
-  background: #ea352d;
-  border: 1px solid #ea352d;
-  color: #fff;
-  width: 100px;
-  height: 50px;
-  font-size: 14px;
-  border-radius: 10px;
-}
-
-/*コメントフォーム（lg以下）*/
-
-/*コメント一覧（lg以下）*/
-
-.comment-lists2 {
-  width: 450px;
+@media (min-width: 992px) {
+  .comment-form, .comment-lists {
+    width: 700px;
+  }
+  .comment-main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .comment-text{
+    width: 600px;
+  }
+  .comment-btn {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
 }
 
-/*/コメント一覧（lg以下）*/
+@media (max-width: 992px) {
+  .comment-form, .comment-lists, .comment-text {
+    width: 450px;
+  }
+  .comment-btn-form {
+    text-align: center;
+  }
+}
+
+/*レスポンシブデザイン*/
