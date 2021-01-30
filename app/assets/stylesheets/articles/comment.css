@@ -76,4 +76,10 @@
   }
 }
 
+@media (max-width: 499px) {
+  .comment-form, .comment-lists, .comment-text {
+    width: 95%;
+  }
+}
+
 /*レスポンシブデザイン*/
