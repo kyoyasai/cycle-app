@@ -1,24 +1,22 @@
-<%# lg以下非表示 %>
-<div class="d-none d-lg-block">
-  <%= form_with model: article, id: "article-post", local: true do |f| %>
+<%= form_with model: article, id: "article-post", local: true do |f| %>
   <div class="post-error">
     <%= render 'shared/error_messages', model: f.object %>
   </div>
   <div class="post-form">
     <%= f.text_field :title, class: "short-text", placeholder: "タイトル" %>
-    <div class="post-second1">
+    <div class="post-second">
       <div class="prefecture-form">
         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"post-prefecture"}) %>
       </div>
-      <div class="distance-form1">
+      <div class="distance-form">
         <%= f.text_field :distance, class: "distance-text", placeholder: "走行距離" %>
         <div class="distance-unit">km</div>
       </div>
     </div>
-    <div class="post-content1">
+    <div class="post-content">
       <%= f.text_area :content, class: "long-text", placeholder: "できごと" %>
     </div>
-    <div class="image-form1">
+    <div class="image-form">
       <div class="image-post-label">画像を投稿<span class="badge bg-secondary badge-info">任意</span></div>
       <div class="image-title">
         <%= f.text_field :image_title, class: "short-text", placeholder: "画像タイトル" %>
@@ -32,46 +30,6 @@
 
   <div class="form-btn-contents">
     <%= f.submit "投稿する", class: "form-btn" %>
-    <%=link_to 'もどる', root_path, class: "back-btn1" %>
+    <div class="btn-div"><%=link_to 'もどる', root_path, class: "back-btn" %></div>
   </div>
-  <% end %>
-</div>
-<%#/ lg以下非表示 %>
-
-<%# lg以下表示 %>
-<div class="d-lg-none">
-  <%= form_with model: article, id: "article-post", local: true do |f| %>
-  <%= render 'shared/error_messages', model: f.object %>
-  <div class="post-form">
-    <%= f.text_field :title, class: "short-text", placeholder: "タイトル" %>
-    <div class="post-second2">
-      <div class="prefecture-form">
-        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"post-prefecture"}) %>
-      </div>
-      <div class="distance-form2">
-        <%= f.text_field :distance, class: "distance-text", placeholder: "走行距離" %>
-        <div class="distance-unit">km</div>
-      </div>
-    </div>
-    <div class="post-content2">
-      <%= f.text_area :content, class: "long-text", placeholder: "できごと" %>
-    </div>
-    <div class="image-form2">
-      <div class="image-post-label">画像を投稿<span class="badge bg-secondary badge-info">任意</span></div>
-      <div class="image-title">
-        <%= f.text_field :image_title, class: "short-text", placeholder: "画像タイトル" %>
-      </div>
-      <div class="image-field">
-        <%= f.file_field :image %>
-        <div id="preview-box"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="form-btn-contents2">
-    <%= f.submit "投稿する", class: "form-btn" %>
-    <div class="btn-div"><%= link_to 'もどる', root_path, class: "back-btn2" %></div>
-  </div>
-  <% end %>
-</div>
-<%#/ lg以下表示 %>
+<% end %>
