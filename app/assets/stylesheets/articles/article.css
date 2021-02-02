@@ -131,6 +131,11 @@
   padding: 3px;
 }
 
+.like-letter {
+  font-size: 14px;
+  color: black;
+}
+
 .bottom-right {
   margin-right: 10px;
 }
