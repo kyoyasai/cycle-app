@@ -1,0 +1,26 @@
+.like{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.like-count {
+  margin-right: 5px;
+}
+
+.like-btn {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 3px;
+}
+
+.like-letter {
+  font-size: 14px;
+  color: black;
+}
+
+@media (max-width: 499px) {
+  .like {
+    margin-bottom: 5px;
+  }
+}

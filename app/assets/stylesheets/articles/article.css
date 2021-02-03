@@ -115,25 +115,14 @@
   color: slategray;
 }
 
-.bottom-left {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-.like-count {
-  margin-right: 5px;
-}
-
-.like-btn {
+.show-link {
   text-decoration: none;
-  font-size: 14px;
-  padding: 3px;
 }
 
-.like-letter {
-  font-size: 14px;
-  color: black;
+.show-link-image {
+  padding-top: 4px;
+  font-size: 12px;
+  text-decoration: none;
 }
 
 .bottom-right {
@@ -165,16 +154,6 @@
   text-align: center;
 }
 
-.show-link {
-  margin-left: 10px;
-  text-decoration: none;
-}
-
-.show-link-image {
-  padding-top: 4px;
-  font-size: 12px;
-  text-decoration: none;
-}
 /*/article2*/
 
 
@@ -203,11 +182,19 @@
   .post-image-show {
     width: 450px;
   }
+  .bottom-left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .show-link {
+    margin-left: 10px;
+  }
 }
 
 @media (max-width: 499px) {
   .post-all, .bottom-show {
-    width: 95%;
+    width: 98%;
   }
   .post-image2 {
     width: 350px;
@@ -215,6 +202,12 @@
   }
   .post-image-show {
     width: 350px;
+  }
+  .bottom-left {
+    display: block;
+  }
+  .show-link {
+    margin-left: 0px;
   }
 }
 
