@@ -86,6 +86,17 @@ http://18.177.112.110/
 % yarn install 
 % rails db:create
 % rails db:migrate
+```
+2. config/environments/development.rbおよびconfig/environments/production.rbの記述を下記のように修正する
+```
+# 修正前
+config.active_storage.service = :amazon
+```
+```
+# 修正後
+config.active_storage.service = :local
+```
+3. 下記コマンドを入力後、http://localhost:3000/ にアクセス
+```ターミナル
 % rails s
 ```
-2. http://localhost:3000/ にアクセス
