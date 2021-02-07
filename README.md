@@ -87,7 +87,7 @@ http://18.177.112.110/
 % rails db:create
 % rails db:migrate
 ```
-2. config/environments/development.rbおよびconfig/environments/production.rbの記述を下記のように修正する
+2. config/environments/development.rbおよびconfig/environments/production.rbの記述を下記のように修正
 ```
 # 修正前
 # ~前略~
