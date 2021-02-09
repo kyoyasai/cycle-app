@@ -71,7 +71,7 @@ http://18.177.112.110/
 <img src="./images/レスポンシブ_PC画面.png" height="400px" title="PC画面"> <img src="./images/レスポンシブ_スマホ画面.png" height="400px" title="スマホ画面">
 
 ## 今後実装したい機能
-* Dockerの導入
+* Dockerの導入<br>
 * キーワードのタグ付け機能<br>
 * ユーザーフォロー機能<br>
 * SNSアカウントとの連携<br>
