@@ -97,6 +97,11 @@
 }
 
 /*画像投稿部*/
+.index-image {
+  text-decoration: none;
+  color: black;
+}
+
 .post-image {
   width: 50%;
   text-align: center;

@@ -42,8 +42,10 @@
         </div>
       <% if article.image.attached? %>
         <div class="post-image d-none d-lg-block">
-          <div><b><%= article.image_title %></b></div>
-          <div><%= link_to image_tag(article.image.variant(resize: '200x200')), article_path(article.id) %></div>
+          <%= link_to article_path(article.id), class: "index-image" do%>
+            <div><b><%= article.image_title %></b></div>
+            <div><%= image_tag(article.image.variant(resize: '200x200')) %></div>
+          <% end %>
         </div>
       <% end %>
       </div>
