@@ -83,3 +83,11 @@
   text-decoration: none;
   color: #333333;
 }
+
+@media (min-width: 992px) {
+  .header-main {
+    position: fixed;
+    height: 100px;
+    background-color: white;
+  }
+}
