@@ -180,7 +180,7 @@
 
 @media (max-width: 992px) {
   .post-all, .bottom-show {
-    width: 470px;
+    width: 570px;
   }
   .post-image2 {
     width: 450px;
@@ -196,6 +196,12 @@
   }
   .show-link {
     margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-all, .bottom-show {
+    width: 470px;
   }
 }
 
