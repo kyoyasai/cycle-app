@@ -93,6 +93,8 @@
 }
 
 .content-show {
+  max-height: 190px;
+  overflow-y: scroll;
   margin-bottom: 10px;
 }
 
