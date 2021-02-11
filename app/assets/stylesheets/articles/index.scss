@@ -26,6 +26,15 @@
   margin-left: 5px;
 }
 
+@media (min-width: 992px) {
+  .main-page {
+    padding-top: 100px;
+  }
+  .search-form {
+    position: fixed;
+  }
+}
+
 @media (max-width: 575px) {
   .search-list {
     padding-left: 40px;
