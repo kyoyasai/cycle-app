@@ -9,3 +9,9 @@
 .comment-post {
   margin-bottom: 16px;
 }
+
+@media (min-width: 992px) {
+  .show-main {
+    padding-top: 100px;
+  }
+}
