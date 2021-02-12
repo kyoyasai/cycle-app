@@ -9,3 +9,9 @@
 .post-main {
   padding: 5vh 15vw;
 }
+
+@media (min-width: 992px) {
+  .post-main {
+    padding-top: 120px;
+  }
+}
