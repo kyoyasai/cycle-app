@@ -34,9 +34,18 @@
   .mypage-top {
     width: 700px;
   }
+  .mypage {
+    padding-top: 100px;
+  }
 }
 
 @media(max-width: 992px) {
+  .mypage-top {
+    width: 550px;
+  }
+}
+
+@media (max-width: 768px) {
   .mypage-top {
     width: 450px;
   }
