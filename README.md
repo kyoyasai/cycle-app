@@ -2,8 +2,11 @@
 #### CYCLE NOTE
 
 ## 開発環境
-HTML&CSS / JavaScript / Bootstrap / Ruby / Ruby on Rails / RSpec /<br>
-MySQL / EC2 / S3 / Visual Studio Code
+* フロントエンド：HTML&CSS / JavaScript / Bootstrap<br>
+* バックエンド：Ruby / Ruby on Rails<br>
+* 単体テスト・結合テスト：RSpec<br>
+* インフラ：AWS（EC2 / S3）<br>
+* テキストエディタ：Visual Studio Code
 
 ## URL
 http://18.177.112.110/
