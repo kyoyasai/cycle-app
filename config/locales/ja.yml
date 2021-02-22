@@ -8,6 +8,7 @@ ja:
        prefecture_id: 都道府県
        distance: 距離
        content: できごと
+       image_title: 画像タイトル
      comment:
        message: コメント
   views:
