@@ -3,7 +3,7 @@
     <%= render 'shared/error_messages', model: f.object %>
   </div>
   <div class="post-form">
-    <%= f.text_field :title, class: "short-text", placeholder: "タイトル" %>
+    <%= f.text_field :title, class: "short-text", placeholder: "タイトル (15字以内)" %>
     <div class="post-second">
       <div class="prefecture-form">
         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"post-prefecture"}) %>
@@ -14,12 +14,12 @@
       </div>
     </div>
     <div class="post-content">
-      <%= f.text_area :content, class: "long-text", placeholder: "できごと" %>
+      <%= f.text_area :content, class: "long-text", placeholder: "できごと (150字以内)" %>
     </div>
     <div class="image-form">
       <div class="image-post-label">画像を投稿<span class="badge bg-secondary badge-info">任意</span></div>
       <div class="image-title">
-        <%= f.text_field :image_title, class: "short-text", placeholder: "画像タイトル" %>
+        <%= f.text_field :image_title, class: "short-text", placeholder: "画像タイトル (15字以内)" %>
       </div>
       <div class="image-field">
         <%= f.file_field :image %>

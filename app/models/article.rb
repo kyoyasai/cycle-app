@@ -1,10 +1,12 @@
 class Article < ApplicationRecord
   with_options presence: true do
-    validates :title
+    validates :title, length: {maximum: 15}
     validates :prefecture_id, numericality: { other_than: 1, message: 'を選択してください' }
     validates :distance
-    validates :content
+    validates :content, length: {maximum: 150}
   end
+
+  validates :image_title, length: {maximum: 15}
 
   belongs_to :user
   has_many   :comments, dependent: :destroy
