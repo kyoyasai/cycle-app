@@ -17,6 +17,7 @@
   font-weight: bold;
   color: #333333;
   font-size: 28px;
+  font-family: "ヒラギノ丸ゴ ProN";
 }
 
 .header-site-title:hover {
@@ -27,6 +28,7 @@
   text-decoration: none;
   color: #333333;
   font-size: 14px;
+  font-family: "ヒラギノ丸ゴ ProN";
 }
 
 .header-site-subtitle:hover {
