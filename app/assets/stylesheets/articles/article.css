@@ -103,11 +103,6 @@
   text-decoration: none;
   color: black;
 }
-
-.post-image {
-  width: 50%;
-  text-align: center;
-}
 /*/画像投稿部*/
 
 /*2,3行目*/
@@ -169,6 +164,10 @@
   .post-all, .bottom-show {
     width: 700px;
   }
+  .post-image {
+    width: 50%;
+    text-align: center;
+  }
   .post-image2 {
     width: 450px;
     margin: 0 auto 30px;
@@ -181,6 +180,10 @@
 @media (max-width: 992px) {
   .post-all, .bottom-show {
     width: 570px;
+  }
+  .post-image {
+    width: 100%;
+    text-align: center;
   }
   .post-image2 {
     width: 450px;
