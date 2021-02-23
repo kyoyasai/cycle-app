@@ -31,10 +31,12 @@
 .bar-btn {
   border: none;
   margin-right: 25px;
+  border-radius: 25px;
 }
 
 .bar-btn:hover {
   cursor: pointer;
+  background-color: rgba(176, 172, 172, 0.3);
 }
 
 .bar-contents {
