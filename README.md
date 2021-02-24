@@ -26,7 +26,7 @@ http://18.177.112.110/
 <img src="./images/記事投稿画面1.png" height="400px" title="記事の投稿">  <img src="./images/記事投稿画面2.png" height="400px" title="記事の投稿">
 #### 2. 記事の表示
 投稿した記事は、トップページに表示されます<br>
-<img src="./images/投稿一覧画面.png" width="900px" title="投稿一覧">
+<img src="./images/投稿一覧.png" width="900px" title="投稿一覧">
 #### 3. いいね機能
 投稿された記事に対して、いいねを押すことができます<br>
 <img src="./images/いいね機能.png" width="900px" title="いいね機能">
