@@ -75,7 +75,7 @@ http://18.177.112.110/
 <img src="./images/並び替え_投稿日時順.png" width="900px" title="投稿並び替え">  <img src="./images/並び替え_いいね順.png" width="900px" title="投稿並び替え"> <br><br>
 * 異なるデバイスの画面幅に対応できるよう、レスポンシブデザインを実装しました（1枚目：PC画面、2枚目：スマホ画面）<br>
 <img src="./images/レスポンシブ_PC画面.png" height="400px" title="PC画面"> <br>
-<img src="./images/レスポンシブ_スマホ画面1.png" height="400px" title="スマホ画面"> <img src="./images/レスポンシブ_スマホ画面2.png" height="400px" title="スマホ画面">
+<img src="./images/レスポンシブ_スマホ画面1.png" height="400px" title="スマホ画面"> &ensp; <img src="./images/レスポンシブ_スマホ画面2.png" height="400px" title="スマホ画面">
 
 ## 今後実装したい機能
 * Dockerの導入<br>
