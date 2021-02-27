@@ -17,6 +17,11 @@ describe User do
         @user.valid?
         expect(@user.errors.full_messages).to include("ニックネームを入力してください")
       end
+      it 'ニックネームが11文字以上だと登録できない' do
+        @user.nickname = Faker::Lorem.characters(number: 11)
+        @user.valid?
+        expect(@user.errors.full_messages).to include("ニックネームは10文字以内で入力してください")
+      end
       it 'Eメールが空だと登録できない' do
         @user.email = ""
         @user.valid?
