@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :password, format: { with: VALID_PASSWORD_REGEX, message: 'には英字と数字の両方を含めて8文字以上で設定して下さい' }, on: :create
 
   with_options presence: true do
-    validates :nickname
+    validates :nickname, length: {maximum: 10}
   end
 
   has_many :articles, dependent: :destroy
