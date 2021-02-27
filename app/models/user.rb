@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,}\z/i
-  validates :password, format: { with: VALID_PASSWORD_REGEX, message: 'には英字と数字の両方を含めて8文字以上で設定して下さい' }, on: :crteate
+  validates :password, format: { with: VALID_PASSWORD_REGEX, message: 'には英字と数字の両方を含めて8文字以上で設定して下さい' }, on: :create
 
   with_options presence: true do
     validates :nickname
