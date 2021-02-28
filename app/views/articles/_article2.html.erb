@@ -12,7 +12,7 @@
       </div>
       <% if user_signed_in? && current_user.id == article.user_id %>
       <div class="bar-btn", id="bar">
-        ...
+        &ensp;...&ensp;
         <ul class="bar-contents", id="pull-down" role="menu">
           <li class="bar-list" role="presentation">
             <%= link_to '編集', edit_article_path(article.id), class: "list-btn" %>

@@ -2,11 +2,11 @@
   <div class="comment-form">
     <%= form_with model: [article, comment], local: true do |f| %>
       <%= render 'shared/error_messages', model: f.object %>
-        <div class="comment-main">
-          <div class="comment-text"><%= f.text_area :message, placeholder: "コメントする", class: "comment-input" %></div>
-          <div class="comment-btn-form"><%= f.submit '送信', class: "comment-btn" %></div>
-        </div>
-      <% end %>
+      <div class="comment-main">
+        <div class="comment-text"><%= f.text_area :message, placeholder: "コメントする", class: "comment-input" %></div>
+        <div class="comment-btn-form"><%= f.submit '送信', class: "comment-btn" %></div>
+      </div>
+    <% end %>
   </div>
 <% end %>
 
