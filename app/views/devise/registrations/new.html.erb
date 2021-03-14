@@ -1,8 +1,8 @@
 <%= render "shared/second-header"%>
 
-<%= form_with model: @user, url: user_registration_path, local: true do |f| %>
 <div class='container-fluid form-wrap'>
   <div class="row">
+    <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
     <div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3">
       <div class='form-header'>
         <b>会員情報入力</b>
@@ -41,8 +41,10 @@
         <%= f.submit "会員登録" ,class:"register-red-btn" %>
       </div>
     </div>
+    <% end %>
+
+    <%= link_to "ログインはこちら", new_user_session_path, class:"user-transition" %>
   </div>
 </div>
-<% end %>
 
 <%= render "shared/footer"%>
